@@ -7,6 +7,7 @@ app.config(['$routeProvider',
     function($routeProvider) {
         $routeProvider
             .when('/', {
+                controller: 'MainCtrl',
                 templateUrl: 'views/home.html'
             })
             .when('/courses', {
@@ -14,6 +15,7 @@ app.config(['$routeProvider',
                 templateUrl: 'views/scuba_courses.html'
             })
             .when('/aboutus', {
+                controller: 'AboutUsCtrl',
                 templateUrl: 'views/about_us.html'
             })
             .otherwise({
@@ -28,9 +30,53 @@ app.run(function($rootScope, $templateCache) {
    });
 });
 
-app.controller('CoursesCtrl', ['$scope',
-    function($scope) {
+app.controller('MainCtrl', ['$scope', '$location',
+    function($scope, $location) {
+        var CONTROLLER_NAME = 'MainCtrl';
+        console.log('--> [MainCtrl]');
+
+        $scope.courses = function() {
+            var path = '/courses';
+            $location.path(path);
+        };
+
+        $scope.about_us = function() {
+            var path = '/aboutus';
+            $location.path(path);
+        };
+    }
+]);
+
+app.controller('CoursesCtrl', ['$scope', '$location',
+    function($scope, $location) {
         var CONTROLLER_NAME = 'CoursesCtrl';
         console.log('--> [CoursesCtrl]');
+
+        $scope.home = function() {
+            var path = '/';
+            $location.path(path);
+        };
+
+        $scope.about_us = function() {
+            var path = '/aboutus';
+            $location.path(path);
+        };
+    }
+]);
+
+app.controller('AboutUsCtrl', ['$scope', '$location',
+    function($scope, $location) {
+        var CONTROLLER_NAME = 'AboutUsCtrl';
+        console.log('--> [AboutUsCtrl]');
+
+        $scope.home = function() {
+            var path = '/';
+            $location.path(path);
+        };
+
+        $scope.courses = function() {
+            var path = '/courses';
+            $location.path(path);
+        };
     }
 ]);

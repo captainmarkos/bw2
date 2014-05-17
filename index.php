@@ -5,6 +5,7 @@
 <script type="text/javascript" src="vendor/angular-1.2.16/angular.js"></script>
 <script type="text/javascript" src="vendor/angular-1.2.16/angular-route.js"></script>
 <script type="text/javascript" src="js/controllers.js"></script>
+<link rel="stylesheet" href="vendor/font-awesome-4.1.0/css/font-awesome.min.css">
 <link href='http://fonts.googleapis.com/css?family=Raleway:700,400,300,200' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="styles/bluewild.css">
 <link rel="stylesheet" href="styles/normalize.css">
