@@ -18,6 +18,10 @@ app.config(['$routeProvider',
                 controller: 'AboutUsCtrl',
                 templateUrl: 'views/about_us.html'
             })
+            .when('/divelog', {
+                controller: 'DiveLogCtrl',
+                templateUrl: 'views/divelog.html'
+            })
             .otherwise({
                 redirectTo: '/'
             });
@@ -44,6 +48,11 @@ app.controller('MainCtrl', ['$scope', '$location',
             var path = '/aboutus';
             $location.path(path);
         };
+
+        $scope.divelog = function() {
+            var path = '/divelog';
+            $location.path(path);
+        };
     }
 ]);
 
@@ -61,6 +70,11 @@ app.controller('CoursesCtrl', ['$scope', '$location',
             var path = '/aboutus';
             $location.path(path);
         };
+
+        $scope.divelog = function() {
+            var path = '/divelog';
+            $location.path(path);
+        };
     }
 ]);
 
@@ -76,6 +90,31 @@ app.controller('AboutUsCtrl', ['$scope', '$location',
 
         $scope.courses = function() {
             var path = '/courses';
+            $location.path(path);
+        };
+
+        $scope.divelog = function() {
+            var path = '/divelog';
+            $location.path(path);
+        };
+    }
+]);
+
+app.controller('DiveLogCtrl', ['$scope', '$location',
+    function($scope, $location) {
+
+        $scope.home = function() {
+            var path = '/';
+            $location.path(path);
+        };
+
+        $scope.courses = function() {
+            var path = '/courses';
+            $location.path(path);
+        };
+
+        $scope.about_us = function() {
+            var path = '/aboutus';
             $location.path(path);
         };
     }
