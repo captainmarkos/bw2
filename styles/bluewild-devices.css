@@ -1,15 +1,14 @@
 /* iPhone 4, iPhone 5 ----------- */
 @media
 only screen and (-webkit-min-device-pixel-ratio : 1.5),
-only screen and (min-device-pixel-ratio : 1.5) {
+only screen and (min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 3),
+only screen and (min-device-pixel-ratio : 2) {
 /*700,500,400,300,200*/
-  body {
+  body, html {
     font-family: 'Raleway', sans-serif;
     color: #fff;
-    background: -webkit-linear-gradient(bottom, #007ece, #003266) 100% 100%;
-    background: -o-linear-gradient(bottom, #007ece, #003266) 100% 100%;
-    background: -moz-linear-gradient(bottom, #007ece, #003266) 100% 100%;
-    background: linear-gradient(to bottom, #007ece, #003266) 100% 100%;
+    background: #0071b8;
   }
 
   nav {
@@ -63,13 +62,12 @@ only screen and (min-device-pixel-ratio : 1.5) {
   }
 
   .main-content p {
-    padding:0 15px;
     font-weight: 500;
   }
 
   .img-content {
     width: 80%;
-    height: 150px;
+    height: 500px !important;
     margin: 3% 10% 0;
   }
 
@@ -112,6 +110,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
   }
 }
 
+/* Tablets */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
 
   html {
@@ -132,10 +131,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
     font-family: 'Raleway', sans-serif;
     color: #fff;
     font-size: 1.5em;
-    background: -webkit-linear-gradient(bottom, #007ece, #003266) 100% 100%;
-    background: -o-linear-gradient(bottom, #007ece, #003266) 100% 100%;
-    background: -moz-linear-gradient(bottom, #007ece, #003266) 100% 100%;
-    background: linear-gradient(to bottom, #007ece, #003266) 100% 100%;
+    background: #0071b8;
   }
 
   header {
@@ -247,6 +243,7 @@ only screen and (min-device-pixel-ratio : 1.5) {
 /*-------------*/
 /* MEDIA QUERY */
 /*-------------*/
+/* for browser window on desktop */
 @media (max-width: 650px) {
   header {
     padding: 5px 0 0 0;
