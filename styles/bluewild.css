@@ -153,10 +153,15 @@ h2 {
 /*----------*/
 
 .row {
-  width: 100%;
+  width: 99%;
   float: left;
   border-bottom: 1px solid #fff;
-  padding: 2% 0 1.5%;
+  border-top: 1px solid #fff;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  padding: 2% 0 1.5% 1%;
+  margin-top: 1%;
 }
 
 .row h4 {
@@ -173,12 +178,17 @@ h2 {
   border: none;
   padding: 0;
   margin: 0;
+  line-height: 1.2em;
 }
 
 .row-image {
   position: relative;
   max-width: 30%;
   float: left;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -o-border-radius: 15px;
+  overflow: hidden;
 }
 
 .row-desc {
@@ -187,10 +197,68 @@ h2 {
   float: left;
 }
 
-.border-top {
-  border-top: 1px solid #fff;
+.no-margin {
+  margin-top: 0;
 }
 
+.subtitle {
+  opacity: .9;
+  -webkit-opacity: .9;
+  -moz-opacity: .9;
+  -o-opacity: .9;
+}
+
+.list-style-number {
+  list-style-type: decimal-leading-zero;
+}
+
+/*---------------*/
+/* SCUBA COURSES */
+/*---------------*/
+
+.row ul {
+  margin-top: 2%;
+  padding: 0 0 0 5.5%;
+  font-size: .9em;
+  font-weight: 200;
+}
+
+.row ul li {
+  margin-bottom: 1%;
+}
+
+.row ul li:last-child {
+  margin-bottom: 0;
+}
+
+.course-title {
+  margin-top: 1%;
+  font-weight: 400;
+}
+
+.row-desc-course {
+  width: 65%;
+  margin-left: 5%;
+  float: left;
+}
+
+.list-style-dots {
+  list-style-type: normal;
+}
+
+.price {
+  font-weight: 300;
+  display: block;
+  border: 1px solid #fff;
+  list-style-type: none;
+  margin: 0 0 2.5%;
+  padding: 1.5% 0 1.5% 3% !important;
+  border-radius: 5px;
+}
+
+.price-color {
+  color: #FFD600;
+}
 
 /*-------------*/
 /* MEDIA QUERY */
@@ -243,6 +311,20 @@ h2 {
 
   .row p {
     padding: 0;
+  }
+
+  /*---------------*/
+  /* SCUBA COURSES */
+  /*---------------*/
+
+  #course-img {
+    display: none;
+  }
+
+  .row-desc-course {
+    width: 90%;
+    margin-left: 5%;
+    float: left;
   }
 
 }
