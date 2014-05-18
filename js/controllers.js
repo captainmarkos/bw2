@@ -20,7 +20,7 @@ app.config(['$routeProvider',
             })
             .when('/divelog', {
                 controller: 'DiveLogCtrl',
-                templateUrl: 'views/divelog.html'
+                templateUrl: 'divelog/index.php'
             })
             .otherwise({
                 redirectTo: '/'
