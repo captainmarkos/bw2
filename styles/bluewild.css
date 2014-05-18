@@ -105,8 +105,9 @@ margin-top: 2.5%;
 }
 
 nav {
+  float: left;
+  width: 100%;
   padding: 10px 0;
-  margin: 20px 0 0;
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
@@ -268,6 +269,159 @@ h2 {
   color: #ffff00;
 }
 
+/* iPhone 4, iPhone 5 ----------- */
+@media
+only screen and (-webkit-min-device-pixel-ratio : 1.5),
+only screen and (min-device-pixel-ratio : 1.5) {
+  header {
+    padding: 5px 0 0 0;
+    width: 100%;
+  }
+
+  .icon-font-size {
+    font-size: 2em;
+  }
+
+  .header-wrapper {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .main-wrapper {
+    min-width: 100%;
+  }
+
+  nav {
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  nav li {
+    display: block;
+    margin: 2% 0;
+  }
+
+  nav a {
+    padding: 0;
+  }
+
+  .main-content p {
+    padding:0 15px;
+  }
+
+  .img-content {
+    width: 80%;
+    height: 150px;
+    margin: 3% 10% 0;
+  }
+
+  .contact-info {
+    float: right;
+    font-weight: 200;
+    font-size: 1em;
+    margin-top: 3%;
+    width: 100%;
+  }
+
+  /*----------*/
+  /* ABOUT US */
+  /*----------*/
+
+  .row p {
+    padding: 0;
+  }
+
+  /*---------------*/
+  /* SCUBA COURSES */
+  /*---------------*/
+
+  #course-img {
+    display: none;
+  }
+
+  .row-desc-course {
+    width: 90%;
+    margin-left: 5%;
+    float: left;
+  }
+}
+
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+  header {
+    padding: 5px 0 0 0;
+    width: 100%;
+  }
+
+  .icon-font-size {
+    font-size: 2em;
+  }
+
+  .header-wrapper {
+    min-width: 100%;
+    text-align: center;
+  }
+
+  .main-wrapper {
+    min-width: 100%;
+  }
+
+  nav {
+    text-align: center;
+    margin-top: 5%;
+  }
+
+  nav li {
+    display: block;
+    margin: 2% 0;
+  }
+
+  nav a {
+    padding: 0;
+  }
+
+  .main-content p {
+    padding:0 15px;
+  }
+
+  .img-content {
+    width: 80%;
+    height: 150px;
+    margin: 3% 10% 0;
+  }
+
+  .contact-info {
+    float: right;
+    font-weight: 200;
+    font-size: 1em;
+    margin-top: 3%;
+    width: 100%;
+  }
+
+  /*----------*/
+  /* ABOUT US */
+  /*----------*/
+
+  .row p {
+    padding: 0;
+  }
+
+  /*---------------*/
+  /* SCUBA COURSES */
+  /*---------------*/
+
+  #course-img {
+    display: none;
+  }
+
+  .row-desc-course {
+    width: 90%;
+    margin-left: 5%;
+    float: left;
+  }
+}
+
 /*-------------*/
 /* MEDIA QUERY */
 /*-------------*/
@@ -292,7 +446,7 @@ h2 {
 
   nav {
   	text-align: center;
-    margin: 12% 0 0;
+    margin-top: 5%;
   }
 
   nav li {
@@ -315,12 +469,12 @@ h2 {
   }
 
   .contact-info {
-  float: right;
-  font-weight: 200;
-  font-size: 1em;
-  margin-top: 3%;
-  width: 100%;
-}
+    float: right;
+    font-weight: 200;
+    font-size: 1em;
+    margin-top: 3%;
+    width: 100%;
+  }
 
   /*----------*/
   /* ABOUT US */
@@ -344,6 +498,12 @@ h2 {
     float: left;
   }
 
+}
+
+@media (min-width: 500px) {
+  .rw-break {
+    display: none;
+  }
 }
 
 
