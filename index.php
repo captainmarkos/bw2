@@ -13,7 +13,7 @@
 <link rel="SHORTCUT ICON" href="favicon.ico" />
 <title>Blue Wild - Scuba Diving</title>
 </head>
-<body ng-app="bw2">
+<body data-ng-app="bw2">
 <header>
     <div class="header-wrapper">
       <h1 id="logo">dive the blue wild</h1>
@@ -26,7 +26,7 @@
     </div>
 </header>
 
-<div ng-view></div>
+<div data-ng-view></div>
 
 </body>
 </html>
