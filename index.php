@@ -15,14 +15,12 @@
 <body ng-app="bw2">
 <header>
     <div class="header-wrapper">
-      <h1 id="logo">blue wild us</h1>
+      <h1 id="logo">dive the blue wild</h1>
       <div class="contact-info">
-         <a href="tel:19542135067">
-            <i class="fa fa-phone"></i> : (954) 213-5067&nbsp;&nbsp;
-         </a>
+         <a href="tel:19542135067"><i class="fa fa-phone"></i> : (954) 213-5067</a>&nbsp;&nbsp;
+
          <br class="rw-break" /> <a href="mailto:bluewildscuba@gmail.com" target="_blank">
-            <i class="fa fa-envelope"></i> : bluewildscuba@gmail.com
-         </a>
+            <i class="fa fa-envelope"></i> : bluewildscuba@gmail.com</a>
       </div>
     </div>
 </header>
