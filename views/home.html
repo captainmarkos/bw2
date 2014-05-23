@@ -1,33 +1,29 @@
-<div class="main-wrapper">
-    <nav>
-      <ul>
-        <li><a class="selected"><i class="fa fa-home icon-font-size"></i></a></li>
-        <li><a ng-click="courses();">Scuba Courses</a></li>
-        <li><a ng-click="about_us();">About Us</a></li>
-        <li><a href="divelog/index.php">Dive Log</a></li>
-        <li><a href="reefcreatures/index.php">Reef Creature Quiz</a></li>
+<div class="row">
+      <nav class="breadcrumbs">
+        <a class="selected" ><i class="fa fa-home icon-font-size"></i></a>
+        <a ng-click="courses();">Scuba Courses</a>
+        <a ng-click="courses();">About Us</a>
+        <a class="hide-for-small-only" href="divelog/index.php">Dive Log</a>
+        <a href="reefcreatures/index.php">Reef Creature Quiz</a>
+      </nav>
+    </div>
+
+    <div class="row">
+      <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
+        <li class="last-image"><img src="images/padi_learn.jpg"></li>
+        <li class="last-image"><img src="images/padi_elearn.jpg"></li>
+        <li class="last-image"><img src="images/padi_advanced.jpg"></li>
       </ul>
-    </nav>
-    <section id="img-container">
-        <div class="img-content no-margin-left">
-            <img src="images/padi_learn.jpg">
-        </div>
-        <div class="img-content">
-            <img src="images/padi_elearn.jpg">
-        </div>
-        <div class="img-content">
-            <img src="images/padi_advanced.jpg">
-        </div>
-    </section>
-    <section>
-        <div class="main-content">
-            <p>SCUBA diving South Florida and the Florida Keys.  Here we are your guides to diving the blue wild.
-            <br />
-            <br />
-            If you've found yourself here and are looking to go scuba diving, you found the right place.  We teach
-            <a class="bwlink" ng-click="courses();"> PADI courses</a> from Discover Scuba Diving, Open Water all the way to Divemaster and specialities.  Scuba diving from Deerfield Beach to the Florida Keys, there's a lot of good diving all around South Florida.
-            <br />
-            <br />Need to take a scuba refresher course?  Looking for a divemaster guide?  How about a beach dive?  Want to continue your scuba education or perhaps become a Divemaster?  Check us out and feel free to contact us with any questions.</p>
-        </div>
-    </section>
-</div>
+    </div>
+    <div class="row">
+      <div class="small-12 large-12 columns no-padding antialised">
+      	<div class="panel">
+	        <p>SCUBA diving South Florida and the Florida Keys. Here we are your guides to diving the blue wild.</p>
+
+           <p>If you've found yourself here and are looking to go scuba diving, you found the right place. We teach <a style="color:#ffff00;" class="bwlink" ng-click="courses();">PADI courses</a> from Discover Scuba Diving, Open Water all the way to Divemaster and specialities. Scuba diving from Deerfield Beach to the Florida Keys, there's a lot of good diving all around South Florida.</p>
+
+           <p>Need to take a scuba refresher course? Looking for a divemaster guide? How about a beach dive? Want to continue your scuba education or perhaps become a Divemaster? Check us out and feel free to contact us with any questions.</p>
+      	</div>
+      </div>
+    </div>
+<!-- </div> -->
