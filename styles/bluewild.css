@@ -14,7 +14,12 @@ body {
   font-style: normal;
   line-height: 1;
   position: relative;
-  cursor: default; }
+  cursor: default;
+}
+
+.last-image {
+      cursor: pointer;
+   }
 
 .panel-margin {
   margin-top: 3% !important;
@@ -26,6 +31,10 @@ body {
 
 .offset-top {
   margin-top: 5% !important;
+}
+
+.no-margin-left {
+  margin-left: 0 !important;
 }
 
 .no-padding {
@@ -318,38 +327,40 @@ body {
 /* more small device media query styles*/
 @media only screen and (max-width: 40em) {
 
+  .inline-list {
+  text-align: center;
+  margin-left: 0;
+  margin-bottom: 0;
+  padding: .4rem 0;
+  list-style: none;
+  overflow: hidden; }
+  .inline-list > li {
+    font-size: 1rem;
+    list-style: none;
+    padding: .25%;
+    float: none;
+    margin-left: 0;
+    display: block; }
+    .inline-list > li > * {
+      display: block; }
+
   html {
     height: 100%;
   }
 
   body {
-      height: 100%;
-      margin: 0;
-      background-repeat: no-repeat !important;
-      background-attachment: fixed !important;
-  }
-
-  /*this is small device media query*/
-  body {
-     /* Safari 4-5, Chrome 1-9 */
-    background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#008fd7), to(#021E6A));
-
-    /* Safari 5.1, Chrome 10+ */
-    background: -webkit-linear-gradient(top, #008fd7, #021E6A);
-
-    /* Firefox 3.6+ */
-    background: -moz-linear-gradient(top, #008fd7, #021E6A);
-
-    /* IE 10 */
-    background: -ms-linear-gradient(top, #008fd7, #021E6A);
-
-    /* Opera 11.10+ */
-    background: -o-linear-gradient(top, #008fd7, #021E6A);
+    background-image: none;
+    background-color: #0076b1 !important;
   }
 
   .contact-info {
+    font-size: 1.15rem;
     padding-top:1%;
     padding-bottom: 1em;
+  }
+
+  h4 {
+    font-size: 1.6rem;
   }
 
   .last-image {
@@ -357,6 +368,7 @@ body {
       margin: 0 auto !important;
       width: 90% !important;
       padding: 1.5%;
+      cursor: pointer;
    }
 
    .breadcrumbs > *:before {

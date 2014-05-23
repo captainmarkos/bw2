@@ -1,18 +1,20 @@
-<div class="row">
-      <nav class="breadcrumbs">
-        <a class="selected" ><i class="fa fa-home icon-font-size"></i></a>
-        <a ng-click="courses();">Scuba Courses</a>
-        <a ng-click="courses();">About Us</a>
-        <a class="hide-for-small-only" href="divelog/index.php">Dive Log</a>
-        <a href="reefcreatures/index.php">Reef Creature Quiz</a>
-      </nav>
+     <div class="row">
+      <div class="large-12 column nav">
+        <ul class="inline-list">
+        <li class="no-margin-left"><a class="selected" ><i class="fa fa-home icon-font-size"></i></a></li>
+        <li><a ng-click="courses();">Scuba Courses</a></li>
+        <li><a ng-click="about_us();">About Us</a></li>
+        <li><a class="hide-for-small-only" href="divelog/index.php">Dive Log</a></li>
+        <li><a href="reefcreatures/index.php">Reef Creature Quiz</a></li>
+        </ul>
+      </div>
     </div>
 
     <div class="row">
       <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
-        <li class="last-image"><img src="images/padi_learn.jpg"></li>
-        <li class="last-image"><img src="images/padi_elearn.jpg"></li>
-        <li class="last-image"><img src="images/padi_advanced.jpg"></li>
+        <li ng-click="courses();" class="last-image"><img src="images/padi_learn.jpg"></li>
+        <li ng-click="courses();" class="last-image"><img src="images/padi_elearn.jpg"></li>
+        <li ng-click="courses();" class="last-image"><img src="images/padi_advanced.jpg"></li>
       </ul>
     </div>
     <div class="row">
