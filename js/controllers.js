@@ -14,6 +14,10 @@ app.config(['$routeProvider',
                 controller: 'CoursesCtrl',
                 templateUrl: 'views/scuba_courses.html'
             })
+            .when('/courses/:course_id', {
+                controller: 'CoursesCtrl',
+                templateUrl: 'views/scuba_courses.html'
+            })
             .when('/aboutus', {
                 controller: 'AboutUsCtrl',
                 templateUrl: 'views/about_us.html'
@@ -28,38 +32,52 @@ app.config(['$routeProvider',
     }
 ]);
 
-app.run(function($rootScope, $templateCache) {
-   $rootScope.$on('$viewContentLoaded', function() {
-      $templateCache.removeAll();
-   });
+app.controller('MainCtrl', function($scope, $location, $anchorScroll) {
+
+    var CONTROLLER_NAME = 'MainCtrl';
+    console.log('--> [MainCtrl]');
+
+    // NOTE: On a per-controller (page) base, here's how to do
+    // anchors for the current view:
+    //   <a ng-click="scrollTo('foo')">Foo</a>
+    //   <div id="foo">Here you are</div>
+    //$scope.scrollTo = function(id) {
+    //    $location.hash(id);
+    //    $anchorScroll();
+    //};
+
+    $scope.courses = function(anchor) {
+        var path = '/courses';
+        if(anchor) {
+            path += '/' + anchor;
+        }
+        $location.path(path);
+    };
+
+    $scope.about_us = function() {
+        var path = '/aboutus';
+        $location.path(path);
+    };
+
+    $scope.divelog = function() {
+        var path = '/divelog';
+        $location.path(path);
+    };
 });
 
-app.controller('MainCtrl', ['$scope', '$location',
-    function($scope, $location) {
-        var CONTROLLER_NAME = 'MainCtrl';
-        console.log('--> [MainCtrl]');
-
-        $scope.courses = function() {
-            var path = '/courses';
-            $location.path(path);
-        };
-
-        $scope.about_us = function() {
-            var path = '/aboutus';
-            $location.path(path);
-        };
-
-        $scope.divelog = function() {
-            var path = '/divelog';
-            $location.path(path);
-        };
-    }
-]);
-
-app.controller('CoursesCtrl', ['$scope', '$location',
-    function($scope, $location) {
+app.controller('CoursesCtrl', function($scope, $location, $routeParams, $anchorScroll) {
         var CONTROLLER_NAME = 'CoursesCtrl';
         console.log('--> [CoursesCtrl]');
+
+        var course_id = $routeParams.course_id;
+        console.log('--> course_id: ' + course_id);
+
+        if(course_id) {
+            var old = $location.hash();
+            $location.hash(course_id);
+            $anchorScroll();
+            $location.hash(old);
+        }
 
         $scope.home = function() {
             var path = '/';
@@ -76,7 +94,7 @@ app.controller('CoursesCtrl', ['$scope', '$location',
             $location.path(path);
         };
     }
-]);
+);
 
 app.controller('AboutUsCtrl', ['$scope', '$location',
     function($scope, $location) {
