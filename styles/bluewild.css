@@ -1,7 +1,11 @@
 /* core css used from foundation css */
 
 .selected {
-  color: #ffff00 !important;
+    color: #ffff88 !important;
+}
+
+.course-title {
+    color: #ffff00 !important;
 }
 
 body {
