@@ -32,11 +32,21 @@ app.config(['$routeProvider',
     }
 ]);
 
-app.controller('MainCtrl', function($scope, $location, $anchorScroll) {
+app.factory('Page', function() {
+    var title = 'Blue Wild - Scuba Diving';
+    return {
+        title: function() { return title; },
+        setTitle: function(newTitle) { title = newTitle; }
+    };
+});
+
+app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
 
     var CONTROLLER_NAME = 'MainCtrl';
     console.log('--> [MainCtrl]');
 
+    $scope.Page = Page;
+    Page.setTitle('Blue Wild - Scuba Diving and Instruction');
     // NOTE: On a per-controller (page) base, here's how to do
     // anchors for the current view:
     //   <a ng-click="scrollTo('foo')">Foo</a>
@@ -65,75 +75,56 @@ app.controller('MainCtrl', function($scope, $location, $anchorScroll) {
     };
 });
 
-app.controller('CoursesCtrl', function($scope, $location, $routeParams, $anchorScroll) {
-        var CONTROLLER_NAME = 'CoursesCtrl';
-        console.log('--> [CoursesCtrl]');
+app.controller('CoursesCtrl', function($scope, $location, $routeParams, $anchorScroll, Page) {
+    var CONTROLLER_NAME = 'CoursesCtrl';
+    console.log('--> [CoursesCtrl]');
 
-        var course_id = $routeParams.course_id;
-        console.log('--> course_id: ' + course_id);
+    Page.setTitle('Blue Wild - Scuba Courses');
 
-        if(course_id) {
-            var old = $location.hash();
-            $location.hash(course_id);
-            $anchorScroll();
-            $location.hash(old);
-        }
+    var course_id = $routeParams.course_id;
+    console.log('--> course_id: ' + course_id);
 
-        $scope.home = function() {
-            var path = '/';
-            $location.path(path);
-        };
-
-        $scope.about_us = function() {
-            var path = '/aboutus';
-            $location.path(path);
-        };
-
-        $scope.divelog = function() {
-            var path = '/divelog';
-            $location.path(path);
-        };
+    if(course_id) {
+        var old = $location.hash();
+        $location.hash(course_id);
+        $anchorScroll();
+        $location.hash(old);
     }
-);
 
-app.controller('AboutUsCtrl', ['$scope', '$location',
-    function($scope, $location) {
-        var CONTROLLER_NAME = 'AboutUsCtrl';
-        console.log('--> [AboutUsCtrl]');
+    $scope.home = function() {
+        var path = '/';
+        $location.path(path);
+    };
 
-        $scope.home = function() {
-            var path = '/';
-            $location.path(path);
-        };
+    $scope.about_us = function() {
+        var path = '/aboutus';
+        $location.path(path);
+    };
 
-        $scope.courses = function() {
-            var path = '/courses';
-            $location.path(path);
-        };
+    $scope.divelog = function() {
+        var path = '/divelog';
+        $location.path(path);
+    };
+});
 
-        $scope.divelog = function() {
-            var path = '/divelog';
-            $location.path(path);
-        };
-    }
-]);
+app.controller('AboutUsCtrl', function($scope, $location, Page) {
+    var CONTROLLER_NAME = 'AboutUsCtrl';
+    console.log('--> [AboutUsCtrl]');
 
-app.controller('DiveLogCtrl', ['$scope', '$location',
-    function($scope, $location) {
+    Page.setTitle('Blue Wild - About Us');
 
-        $scope.home = function() {
-            var path = '/';
-            $location.path(path);
-        };
+    $scope.home = function() {
+        var path = '/';
+        $location.path(path);
+    };
 
-        $scope.courses = function() {
-            var path = '/courses';
-            $location.path(path);
-        };
+    $scope.courses = function() {
+        var path = '/courses';
+        $location.path(path);
+    };
 
-        $scope.about_us = function() {
-            var path = '/aboutus';
-            $location.path(path);
-        };
-    }
-]);
+    $scope.divelog = function() {
+        var path = '/divelog';
+        $location.path(path);
+    };
+});
