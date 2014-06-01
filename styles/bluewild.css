@@ -5,11 +5,12 @@
 }
 
 body {
-    background-image: url('../images/underwater_background.jpg');
+    background-image: url('../images/underwater_background_shorter.jpg');
     background-repeat: no-repeat;
     background-position: center top;
-    background-color: #0076b1;
-    background-attachment: fixed;
+    background-attachment: fixed !important;
+    background-color: #014ea6;
+    /* background-color: #0076b1; */  /* Daniel's original background-color */
 
     color: #fff;
     padding: 0;
@@ -240,6 +241,8 @@ body {
 
 /* small devices */
 @media only screen {
+    /* Define mobile styles */
+
     .column, .columns {
         position: relative;
         padding-left: 0.9375em;
@@ -266,8 +269,22 @@ body {
     .small-12 { width: 100%; }
 }
 
+
+@media only screen and (min-width: 40.063em) and (max-width: 64em) {
+    /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
+    body {
+        background-image: url('../images/underwater_background_shorter_max_width_1024.jpg');
+        background-repeat: no-repeat;
+        background-position: center top;
+        background-color: #014ea6;
+        background-attachment: fixed !important;
+    }
+}
+
 /* tablet like devices */
 @media only screen and (min-width: 40.063em) {
+    /* min-width 641px, medium screens */
+
     .column, .columns {
         position: relative;
         padding-left: 0.9375em;
@@ -301,6 +318,8 @@ body {
 }
 
 @media only screen and (min-width: 64.063em) {
+    /* min-width 1025px, large screens */
+
     .column, .columns {
         position: relative;
         padding-left: 0.9375em;
@@ -335,6 +354,7 @@ body {
 
 /* more small device media query styles*/
 @media only screen and (max-width: 40em) {
+    /* max-width 640px, mobile-only styles, use when QAing mobile issues */
     .inline-list {
         text-align: center;
         margin-left: 0;
