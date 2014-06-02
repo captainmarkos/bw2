@@ -3,11 +3,11 @@
 var app = angular.module('bw2', ['ngRoute']);
 
 // Configure the routes for our app.
-app.config(['$routeProvider',
-    function($routeProvider) {
+app.config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider) {
         $routeProvider
             .when('/', {
-                controller: 'MainCtrl',
+                // NOTE: controller: 'MainCtrl' is loaded in the index page.
                 templateUrl: 'views/home.html'
             })
             .when('/courses', {
@@ -15,20 +15,26 @@ app.config(['$routeProvider',
                 templateUrl: 'views/scuba_courses.html'
             })
             .when('/courses/:course_id', {
-                controller: 'CoursesCtrl',
+                controller: 'CourseDetailCtrl',
                 templateUrl: 'views/scuba_courses.html'
             })
             .when('/aboutus', {
                 controller: 'AboutUsCtrl',
                 templateUrl: 'views/about_us.html'
             })
-            .when('/divelog', {
-                controller: 'DiveLogCtrl',
-                templateUrl: 'divelog/index.php'
-            })
             .otherwise({
                 redirectTo: '/'
             });
+
+        // NOTE: Setting html5 mode removes the need for the hash tag
+        // in the url.  However IE lt 10 sucks so we need to check.
+        console.log('--> [app.config]: ' + navigator.appVersion);
+        if(navigator.appVersion.indexOf('MSIE 9') != -1) {
+            console.log('--> [app.config]: Detected MSIE 9 - html5 mode false');
+        } else {
+            console.log('--> [app.config]: html5 mode true');
+            //$locationProvider.html5Mode(true);
+        }
     }
 ]);
 
@@ -45,22 +51,25 @@ app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
     var CONTROLLER_NAME = 'MainCtrl';
     console.log('--> [MainCtrl]');
 
-    $scope.Page = Page;
-    Page.setTitle('Blue Wild - Scuba Diving and Instruction');
     // NOTE: On a per-controller (page) base, here's how to do
     // anchors for the current view:
+    //
     //   <a ng-click="scrollTo('foo')">Foo</a>
     //   <div id="foo">Here you are</div>
-    //$scope.scrollTo = function(id) {
-    //    $location.hash(id);
-    //    $anchorScroll();
-    //};
+    //   $scope.scrollTo = function(id) {
+    //       $location.hash(id);
+    //       $anchorScroll();
+    //   };
+
+    $scope.Page = Page;
+    Page.setTitle('Blue Wild - Scuba Diving and Instruction');
 
     $scope.courses = function(anchor) {
         var path = '/courses';
         if(anchor) {
             path += '/' + anchor;
         }
+        console.log('path: ' + path);
         $location.path(path);
     };
 
@@ -78,6 +87,28 @@ app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
 app.controller('CoursesCtrl', function($scope, $location, $routeParams, $anchorScroll, Page) {
     var CONTROLLER_NAME = 'CoursesCtrl';
     console.log('--> [CoursesCtrl]');
+
+    Page.setTitle('Blue Wild - Scuba Courses');
+
+    $scope.home = function() {
+        var path = '/';
+        $location.path(path);
+    };
+
+    $scope.about_us = function() {
+        var path = '/aboutus';
+        $location.path(path);
+    };
+
+    $scope.divelog = function() {
+        var path = '/divelog';
+        $location.path(path);
+    };
+});
+
+
+app.controller('CourseDetailCtrl', function($scope, $location, $routeParams, $anchorScroll, Page) {
+    console.log('--> [CourseDetailCtrl]');
 
     Page.setTitle('Blue Wild - Scuba Courses');
 
