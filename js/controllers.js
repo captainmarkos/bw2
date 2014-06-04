@@ -5,6 +5,9 @@ var app = angular.module('bw2', ['ngRoute']);
 // Configure the routes for our app.
 app.config(['$routeProvider', '$locationProvider',
     function($routeProvider, $locationProvider) {
+
+        $locationProvider.hashPrefix('!');
+
         $routeProvider
             .when('/', {
                 // NOTE: controller: 'MainCtrl' is loaded in the index page.
@@ -28,6 +31,7 @@ app.config(['$routeProvider', '$locationProvider',
 
         // NOTE: Setting html5 mode removes the need for the hash tag
         // in the url.  However IE lt 10 sucks so we need to check.
+        /*
         console.log('--> [app.config]: ' + navigator.appVersion);
         if(navigator.appVersion.indexOf('MSIE 9') != -1) {
             console.log('--> [app.config]: Detected MSIE 9 - html5 mode false');
@@ -35,6 +39,7 @@ app.config(['$routeProvider', '$locationProvider',
             console.log('--> [app.config]: html5 mode true');
             //$locationProvider.html5Mode(true);
         }
+        */
     }
 ]);
 
