@@ -1,0 +1,20 @@
+
+http://www.yearofmoo.com/2012/11/angularjs-and-seo.html
+
+Install Perl modules
+~> sudo cpan App::cpanminus
+~> sudo cpanm URI
+
+
+http://bw2.local:81/?_escaped_fragment_=/index.html
+
+
+To create snapshots:
+--------------------
+~> make-snapshot.sh 'http://bw2.local:81/#!/home'
+~> make-snapshot.sh 'http://bw2.local:81/#!/aboutus'
+~> make-snapshot.sh 'http://bw2.local:81/#!/courses'
+
+* NOTE: Rename home.html --> index.html
+
+

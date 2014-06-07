@@ -69,6 +69,8 @@ app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
     $scope.Page = Page;
     Page.setTitle('Blue Wild - Scuba Diving and Instruction');
 
+    // Flag used in the DOM that lets the headless browser know that it's ready.
+
     $scope.courses = function(anchor) {
         var path = '/courses';
         if(anchor) {
@@ -87,6 +89,8 @@ app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
         var path = '/divelog';
         $location.path(path);
     };
+
+    $scope.status = 'ready';
 });
 
 app.controller('CoursesCtrl', function($scope, $location, $routeParams, $anchorScroll, Page) {
@@ -109,6 +113,8 @@ app.controller('CoursesCtrl', function($scope, $location, $routeParams, $anchorS
         var path = '/divelog';
         $location.path(path);
     };
+
+    $scope.status = 'ready';
 });
 
 
@@ -141,6 +147,8 @@ app.controller('CourseDetailCtrl', function($scope, $location, $routeParams, $an
         var path = '/divelog';
         $location.path(path);
     };
+
+    $scope.status = 'ready';
 });
 
 app.controller('AboutUsCtrl', function($scope, $location, Page) {
@@ -163,4 +171,6 @@ app.controller('AboutUsCtrl', function($scope, $location, Page) {
         var path = '/divelog';
         $location.path(path);
     };
+
+    $scope.status = 'ready';
 });

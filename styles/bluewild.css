@@ -9,11 +9,11 @@
 }
 
 body {
-    background-image: url('../images/underwater_background_shorter.jpg');
-    background-repeat: no-repeat;
+    background-image: url('../images/underwater_gradient_1.jpg');
+    background-color: #014ea6;
+    background-repeat: repeat-x;
     background-position: center top;
     background-attachment: fixed !important;
-    background-color: #014ea6;
     /* background-color: #0076b1; */  /* Daniel's original background-color */
 
     color: #fff;
