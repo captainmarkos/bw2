@@ -3,14 +3,17 @@
 var app = angular.module('bw2', ['ngRoute']);
 
 // Configure the routes for our app.
-app.config(['$routeProvider', '$locationProvider',
-    function($routeProvider, $locationProvider) {
+app.config(['$locationProvider', '$routeProvider',
+    function($locationProvider, $routeProvider) {
 
         $locationProvider.hashPrefix('!');
 
         $routeProvider
             .when('/', {
                 // NOTE: controller: 'MainCtrl' is loaded in the index page.
+                templateUrl: 'views/home.html'
+            })
+            .when('/home', {
                 templateUrl: 'views/home.html'
             })
             .when('/courses', {
@@ -26,7 +29,7 @@ app.config(['$routeProvider', '$locationProvider',
                 templateUrl: 'views/about_us.html'
             })
             .otherwise({
-                redirectTo: '/'
+                redirectTo: '/home'
             });
 
         // NOTE: Setting html5 mode removes the need for the hash tag

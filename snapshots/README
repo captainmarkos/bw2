@@ -6,7 +6,8 @@ Install Perl modules
 ~> sudo cpanm URI
 
 
-http://bw2.local:81/?_escaped_fragment_=/index.html
+http://bw2.local:81/?_escaped_fragment_=/#!/
+
 
 
 To create snapshots:
