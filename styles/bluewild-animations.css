@@ -1,0 +1,34 @@
+/* NOTE: Fade in example 2. */
+/* ------------------------ */
+.reveal-animation.ng-enter {
+     -webkit-transition: 0.4s linear all; /* Safari/Chrome */
+     transition: 0.4s linear all; /* All other modern browsers and IE10+ */
+
+     /* The animation preparation code */
+     opacity: 0;
+}
+
+.reveal-animation.ng-enter.ng-enter-active {
+    /* The animation code itself */
+    opacity: 1;
+}
+
+
+/* NOTE: Fade-in example 1 */
+/* ------------------------ */
+/*
+.reveal-animation.ng-enter {
+    -webkit-animation: enter_sequence 1s linear;
+    animation: enter_sequence 1s linear;
+}
+
+@-webkit-keyframes enter_sequence {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+
+@keyframes enter_sequence {
+    from { opacity:0; }
+    to { opacity:1; }
+}
+*/

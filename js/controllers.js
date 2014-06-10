@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('bw2', ['ngRoute']);
+var app = angular.module('bw2', ['ngRoute', 'ngAnimate']);
 
 // Configure the routes for our app.
 app.config(['$locationProvider', '$routeProvider',
@@ -55,24 +55,14 @@ app.factory('Page', function() {
 });
 
 app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
-
-    var CONTROLLER_NAME = 'MainCtrl';
     console.log('--> [MainCtrl]');
 
-    // NOTE: On a per-controller (page) base, here's how to do
-    // anchors for the current view:
-    //
-    //   <a ng-click="scrollTo('foo')">Foo</a>
-    //   <div id="foo">Here you are</div>
-    //   $scope.scrollTo = function(id) {
-    //       $location.hash(id);
-    //       $anchorScroll();
-    //   };
+        var old = $location.hash();
+        console.log('--> old: ' + old);
+
 
     $scope.Page = Page;
     Page.setTitle('Blue Wild - Scuba Diving and Instruction');
-
-    // Flag used in the DOM that lets the headless browser know that it's ready.
 
     $scope.courses = function(anchor) {
         var path = '/courses';
@@ -83,97 +73,40 @@ app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
         $location.path(path);
     };
 
-    $scope.about_us = function() {
-        var path = '/aboutus';
-        $location.path(path);
-    };
-
-    $scope.divelog = function() {
-        var path = '/divelog';
-        $location.path(path);
-    };
-
+    // NOTE: For snapshots.
+    // Flag used in the DOM that lets the headless browser know that it's ready.
     $scope.status = 'ready';
 });
 
 app.controller('CoursesCtrl', function($scope, $location, $routeParams, $anchorScroll, Page) {
-    var CONTROLLER_NAME = 'CoursesCtrl';
-    console.log('--> [CoursesCtrl]');
-
     Page.setTitle('Blue Wild - Scuba Courses');
-
-    $scope.home = function() {
-        var path = '/';
-        $location.path(path);
-    };
-
-    $scope.about_us = function() {
-        var path = '/aboutus';
-        $location.path(path);
-    };
-
-    $scope.divelog = function() {
-        var path = '/divelog';
-        $location.path(path);
-    };
+    console.log('--> [CoursesCtrl]');
 
     $scope.status = 'ready';
 });
 
 
 app.controller('CourseDetailCtrl', function($scope, $location, $routeParams, $anchorScroll, Page) {
-    console.log('--> [CourseDetailCtrl]');
-
     Page.setTitle('Blue Wild - Scuba Courses');
+    console.log('--> [CourseDetailCtrl]');
 
     var course_id = $routeParams.course_id;
     console.log('--> course_id: ' + course_id);
 
     if(course_id) {
         var old = $location.hash();
+        console.log('--> old: ' + old);
         $location.hash(course_id);
         $anchorScroll();
         $location.hash(old);
     }
 
-    $scope.home = function() {
-        var path = '/';
-        $location.path(path);
-    };
-
-    $scope.about_us = function() {
-        var path = '/aboutus';
-        $location.path(path);
-    };
-
-    $scope.divelog = function() {
-        var path = '/divelog';
-        $location.path(path);
-    };
-
     $scope.status = 'ready';
 });
 
 app.controller('AboutUsCtrl', function($scope, $location, Page) {
-    var CONTROLLER_NAME = 'AboutUsCtrl';
-    console.log('--> [AboutUsCtrl]');
-
     Page.setTitle('Blue Wild - About Us');
-
-    $scope.home = function() {
-        var path = '/';
-        $location.path(path);
-    };
-
-    $scope.courses = function() {
-        var path = '/courses';
-        $location.path(path);
-    };
-
-    $scope.divelog = function() {
-        var path = '/divelog';
-        $location.path(path);
-    };
+    console.log('--> [AboutUsCtrl]');
 
     $scope.status = 'ready';
 });
