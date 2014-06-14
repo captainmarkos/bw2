@@ -2,7 +2,8 @@ Options +FollowSymLinks
 RewriteEngine On
 RewriteCond %{REQUEST_URI}  ^/$
 RewriteCond %{QUERY_STRING} ^_escaped_fragment_=/?(.*)$
-RewriteRule ^(.*)$ /snapshots/%1? [NC,L]
+RewriteRule ^(.*)$ http://%{HTTP_HOST}/snapshots/%1? [NC,L]
+#RewriteRule ^(.*)$ /snapshots/%1? [NC,L]
 
 
 # http://httpd.apache.org/docs/2.2/rewrite/intro.html
@@ -17,3 +18,4 @@ RewriteRule ^(.*)$ /snapshots/%1? [NC,L]
 #
 # %1 Refers to a pattern matched in a RewriteCond condition,
 # while $1 refers to a pattern matched inside a RewriteRule.
+
