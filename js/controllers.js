@@ -10,10 +10,11 @@ app.config(['$locationProvider', '$routeProvider',
 
         $routeProvider
             .when('/', {
-                // NOTE: controller: 'MainCtrl' is loaded in the index page.
+                controller: 'MainCtrl',
                 templateUrl: 'views/home.html'
             })
             .when('/home', {
+                controller: 'MainCtrl',
                 templateUrl: 'views/home.html'
             })
             .when('/courses', {
@@ -55,12 +56,6 @@ app.factory('Page', function() {
 });
 
 app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
-    console.log('--> [MainCtrl]');
-
-        var old = $location.hash();
-        console.log('--> old: ' + old);
-
-
     $scope.Page = Page;
     Page.setTitle('Blue Wild - Scuba Diving and Instruction');
 
@@ -78,10 +73,8 @@ app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
     $scope.status = 'ready';
 });
 
-app.controller('CoursesCtrl', function($scope, $location, $routeParams, $anchorScroll, Page) {
+app.controller('CoursesCtrl', function($scope, $location, $routeParams, Page) {
     Page.setTitle('Blue Wild - Scuba Courses');
-    console.log('--> [CoursesCtrl]');
-
     $scope.status = 'ready';
 });
 
@@ -95,7 +88,6 @@ app.controller('CourseDetailCtrl', function($scope, $location, $routeParams, $an
 
     if(course_id) {
         var old = $location.hash();
-        console.log('--> old: ' + old);
         $location.hash(course_id);
         $anchorScroll();
         $location.hash(old);

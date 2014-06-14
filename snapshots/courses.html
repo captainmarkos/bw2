@@ -1,17 +1,19 @@
-<html id="ng-app" ng-app="bw2" data-ng-controller="MainCtrl" class="no-js ng-scope" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
+<html id="ng-app" ng-app="bw2" ng-controller="MainCtrl" class="no-js ng-scope" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
 <meta charset="utf-8">
-<meta name="description" content="Scuba dive the blue wild in Fort Lauderdale and the Florida Keys. Scuba courses available for newbies thru divemaster. Speciality scuba lessons and dive trips.">
+<meta name="description" content="Scuba dive the blue wild in Fort Lauderdale and the Florida Keys. Scuba courses available for new divers thru divemaster. Speciality scuba lessons and dive trips.">
 <meta name="keywords" content="Scuba Diving, PADI, Open Water, Divemaster, Fort Lauderdale, Florida Keys">
 <meta name="author" content="Captain Markos">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script type="text/javascript" src="vendor/angular-1.2.16/angular.min.js?v=20140529"></script>
-<script type="text/javascript" src="vendor/angular-1.2.16/angular-route.min.js"></script>
+<script type="text/javascript" src="vendor/angular-1.2.16/angular.js?v=20140529"></script>
+<script type="text/javascript" src="vendor/angular-1.2.16/angular-route.js"></script>
+<script type="text/javascript" src="vendor/angular-1.2.16/angular-animate.js"></script>
 <script type="text/javascript" src="js/controllers.js?v=20140603"></script>
 <link rel="stylesheet" href="vendor/font-awesome-4.1.0/css/font-awesome.min.css">
 <link href="http://fonts.googleapis.com/css?family=Raleway:400" rel="stylesheet" type="text/css">
 <link rel="stylesheet" href="styles/foundation.css">
 <link rel="stylesheet" href="styles/normalize.css">
 <link type="text/css" rel="stylesheet" href="styles/bluewild.css">
+<link type="text/css" rel="stylesheet" href="styles/bluewild-animations.css">
 <link type="image/x-icon" rel="SHORTCUT ICON" href="favicon.ico">
 <title class="ng-binding">Blue Wild - Scuba Courses</title>
 </head>
@@ -32,20 +34,23 @@
         </div>
     </header>
 
-    <!-- ngView:  --><div data-ng-view="" class="ng-scope"><!-- navbar -->
-<div class="row ng-scope">
-    <div class="large-12 column nav">
-        <ul class="inline-list">
-          <li class="no-margin-left"><a href="/"><i class="fa fa-home icon-font-size"></i></a></li>
-          <li><a href="#!/courses" class="selected">Scuba Courses</a></li>
-          <li><a href="#!/aboutus">About Us</a></li>
-          <li><a href="divelog/index.php" class="hide-for-small-only">Dive Log</a></li>
-          <li><a href="reefcreatures/index.php">Reef Creature Quiz</a></li>
-        </ul>
+    <!-- navbar -->
+    <div class="row">
+        <div class="large-12 column nav">
+            <ul class="inline-list">
+              <li class="no-margin-left"><a href="/"><i class="fa fa-home icon-font-size"></i></a></li>
+              <li><a data-ng-href="#!/courses" href="#!/courses">Scuba Courses</a></li>
+              <li><a data-ng-href="#!/aboutus" href="#!/aboutus">About Us</a></li>
+              <li><a class="hide-for-small-only" href="divelog/index.php">Dive Log</a></li>
+              <li><a href="reefcreatures/index.php">Reef Creature Quiz</a></li>
+            </ul>
+        </div>
     </div>
-</div>
 
-<div class="row ng-scope">
+
+    <!-- NOTE: The animate service will automatically add .ng-enter and .ng-leave
+         to the element to trigger the CSS transition/animations. -->
+    <!-- ngView:  --><div class="reveal-animation ng-scope" data-ng-view=""><div class="row ng-scope">
     <div class="large-12 columns no-padding panel-margin">
         <div class="panel">
             <!-- BEGIN: Discover Scuba Diving -->

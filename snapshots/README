@@ -17,5 +17,5 @@ To create snapshots:
 ~> make-snapshot.sh 'http://bw2.local:81/#!/courses'
 
 * NOTE: Rename home.html --> index.html
-
+* NOTE: Need ng-controller="MainCtrl" in index.html
 
