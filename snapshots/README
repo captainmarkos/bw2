@@ -6,8 +6,8 @@ Install Perl modules
 ~> sudo cpanm URI
 
 
-http://bw2.local:81/?_escaped_fragment_=/#!/
-
+http://bw2.local:81/?_escaped_fragment_=/
+http://bw2.local:81/?_escaped_fragment_=/home
 
 
 To create snapshots:
@@ -16,6 +16,7 @@ To create snapshots:
 ~> make-snapshot.sh 'http://bw2.local:81/#!/aboutus'
 ~> make-snapshot.sh 'http://bw2.local:81/#!/courses'
 
+* NOTE: Remove the line with ng-view from the snapshots
 * NOTE: Rename home.html --> index.html
 * NOTE: Need ng-controller="MainCtrl" in index.html
 
