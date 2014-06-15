@@ -18,25 +18,16 @@ app.config(function($routeProvider, $locationProvider) {
 });
 
 app.factory('Page', function() {
-    var title = 'Blue Wild - Scuba Diving';
+    var title = 'blue wild scuba: diving and courses';
     return {
         title: function() { return title; },
-        setTitle: function(newTitle) { title = newTitle; }
+        set_title: function(new_title) { title = new_title; }
     };
 });
 
 app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
     $scope.Page = Page;
-    Page.setTitle('Blue Wild - Scuba Diving and Instruction');
-
-    $scope.courses = function(anchor) {
-        var path = '/courses';
-        if(anchor) {
-            path += '/' + anchor;
-        }
-        console.log('path: ' + path);
-        $location.path(path);
-    };
+    Page.set_title('blue wild scuba: diving and courses');
 
     // NOTE: For snapshots, flag used in the DOM that lets phantomjs
     // headless browser know that it's ready to create a snapshot.
@@ -44,13 +35,12 @@ app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
 });
 
 app.controller('CoursesCtrl', function($scope, $location, $routeParams, Page) {
-    Page.setTitle('Blue Wild - Scuba Courses');
+    Page.set_title('blue wild scuba: courses');
     $scope.status = 'ready';
 });
 
-
 app.controller('CourseDetailCtrl', function($scope, $location, $routeParams, $anchorScroll, Page) {
-    Page.setTitle('Blue Wild - Scuba Courses');
+    Page.set_title('blue wild scuba: courses');
 
     var course_id = $routeParams.course_id;
     console.log('--> [CourseDetailCtrl] course_id: ' + course_id);
@@ -65,7 +55,7 @@ app.controller('CourseDetailCtrl', function($scope, $location, $routeParams, $an
 });
 
 app.controller('AboutUsCtrl', function($scope, $location, Page) {
-    Page.setTitle('Blue Wild - About Us');
+    Page.set_title('blue wild scuba: about');
     console.log('--> [AboutUsCtrl]');
 
     $scope.status = 'ready';
