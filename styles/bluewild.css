@@ -26,6 +26,9 @@ body {
     line-height: 1;
     position: relative;
     cursor: default;
+
+    overflow: auto;
+    height: 100%;
 }
 
 .last-image {

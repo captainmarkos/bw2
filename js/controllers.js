@@ -48,7 +48,7 @@ app.controller('CourseDetailCtrl', function($scope, $location, $routeParams, $an
     if(course_id) {
         var elem =  $('#' + course_id);
         var pos = elem.position();
-        $("body").animate({scrollTop: pos.top}, "slow");
+        $('body,html').animate({scrollTop: pos.top}, 'slow');
     }
 
     $scope.status = 'ready';
