@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html id="ng-app" data-ng-app="bw2" data-ng-controller="MainCtrl" class="no-js" lang="en">
 <head>
+<meta name="fragment" content="!">
 <meta charset="utf-8" />
 <meta name="description" content="Scuba dive the blue wild in Fort Lauderdale and the Florida Keys. Scuba courses available for new divers thru divemaster. Speciality scuba lessons and dive trips." />
 <meta name="keywords" content="Scuba Diving, PADI, Open Water, Divemaster, Fort Lauderdale, Florida Keys" />
 <meta name="author" content="Captain Markos" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript" src="/vendor/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="/vendor/angular-1.2.16/angular.min.js?v=20140529"></script>
 <script type="text/javascript" src="/vendor/angular-1.2.16/angular-route.min.js"></script>
 <script type="text/javascript" src="/vendor/angular-1.2.16/angular-animate.min.js"></script>
@@ -40,10 +42,10 @@
     <div class="row">
         <div class="large-12 column nav">
             <ul class="inline-list">
-              <li class="no-margin-left"><a href="/"><i class="fa fa-home icon-font-size"></i></a></li>
-              <li><a data-ng-href="#!/courses">Scuba Courses</a></li>
-              <li><a data-ng-href="#!/aboutus">About Us</a></li>
-              <li><a class="hide-for-small-only" href="/divelog/index.php">Dive Log</a></li>
+              <li class="no-margin-left"><a data-ng-href="/"><i class="fa fa-home icon-font-size"></i></a></li>
+              <li><a data-ng-href="/courses">Scuba Courses</a></li>
+              <li><a data-ng-href="/aboutus">About Us</a></li>
+              <li><a href="/divelog/index.php" class="hide-for-small-only">Dive Log</a></li>
               <li><a href="/reefcreatures/index.php">Reef Creature Quiz</a></li>
             </ul>
         </div>

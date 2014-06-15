@@ -16,7 +16,7 @@ To create snapshots:
 ~> make-snapshot.sh 'http://bw2.local:81/#!/aboutus'
 ~> make-snapshot.sh 'http://bw2.local:81/#!/courses'
 
-* NOTE: Remove the line with ng-view from the snapshots
+* NOTE: Remove the ng-view directive from the snapshots
 * NOTE: Rename home.html --> index.html
 * NOTE: Need ng-controller="MainCtrl" in index.html
 

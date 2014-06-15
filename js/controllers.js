@@ -1,51 +1,21 @@
-'use strict';
-
+//
+// bluewildscuba.com
+//
 var app = angular.module('bw2', ['ngRoute', 'ngAnimate']);
 
 // Configure the routes for our app.
-app.config(['$locationProvider', '$routeProvider',
-    function($locationProvider, $routeProvider) {
+app.config(function($routeProvider, $locationProvider) {
 
-        $locationProvider.hashPrefix('!');
+    $locationProvider.html5Mode(true);
 
-        $routeProvider
-            .when('/', {
-                controller: 'MainCtrl',
-                templateUrl: '/views/home.html'
-            })
-            .when('/home', {
-                controller: 'MainCtrl',
-                templateUrl: '/views/home.html'
-            })
-            .when('/courses', {
-                controller: 'CoursesCtrl',
-                templateUrl: '/views/scuba_courses.html'
-            })
-            .when('/courses/:course_id', {
-                controller: 'CourseDetailCtrl',
-                templateUrl: '/views/scuba_courses.html'
-            })
-            .when('/aboutus', {
-                controller: 'AboutUsCtrl',
-                templateUrl: '/views/about_us.html'
-            })
-            .otherwise({
-                redirectTo: '/home'
-            });
-
-        // NOTE: Setting html5 mode removes the need for the hash tag
-        // in the url.  However IE lt 10 sucks so we need to check.
-        /*
-        console.log('--> [app.config]: ' + navigator.appVersion);
-        if(navigator.appVersion.indexOf('MSIE 9') != -1) {
-            console.log('--> [app.config]: Detected MSIE 9 - html5 mode false');
-        } else {
-            console.log('--> [app.config]: html5 mode true');
-            //$locationProvider.html5Mode(true);
-        }
-        */
-    }
-]);
+    $routeProvider
+        .when('/', { controller: 'MainCtrl', templateUrl: '/views/home.html' })
+        .when('/home', { controller: 'MainCtrl', templateUrl: '/views/home.html' })
+        .when('/courses', { controller: 'CoursesCtrl', templateUrl: '/views/scuba_courses.html' })
+        .when('/courses/:course_id', { controller: 'CourseDetailCtrl', templateUrl: '/views/scuba_courses.html' })
+        .when('/aboutus', { controller: 'AboutUsCtrl', templateUrl: '/views/about_us.html' })
+        .otherwise({ redirectTo: '/home' });
+});
 
 app.factory('Page', function() {
     var title = 'Blue Wild - Scuba Diving';
@@ -68,8 +38,8 @@ app.controller('MainCtrl', function($scope, $location, $anchorScroll, Page) {
         $location.path(path);
     };
 
-    // NOTE: For snapshots.
-    // Flag used in the DOM that lets the headless browser know that it's ready.
+    // NOTE: For snapshots, flag used in the DOM that lets phantomjs
+    // headless browser know that it's ready to create a snapshot.
     $scope.status = 'ready';
 });
 
@@ -81,16 +51,14 @@ app.controller('CoursesCtrl', function($scope, $location, $routeParams, Page) {
 
 app.controller('CourseDetailCtrl', function($scope, $location, $routeParams, $anchorScroll, Page) {
     Page.setTitle('Blue Wild - Scuba Courses');
-    console.log('--> [CourseDetailCtrl]');
 
     var course_id = $routeParams.course_id;
-    console.log('--> course_id: ' + course_id);
+    console.log('--> [CourseDetailCtrl] course_id: ' + course_id);
 
     if(course_id) {
-        var old = $location.hash();
-        $location.hash(course_id);
-        $anchorScroll();
-        $location.hash(old);
+        var elem =  $('#' + course_id);
+        var pos = elem.position();
+        $("body").animate({scrollTop: pos.top}, "slow");
     }
 
     $scope.status = 'ready';

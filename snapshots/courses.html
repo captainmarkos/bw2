@@ -1,9 +1,11 @@
 <html id="ng-app" data-ng-app="bw2" data-ng-controller="MainCtrl" class="no-js ng-scope" lang="en"><head><style type="text/css">@charset "UTF-8";[ng\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide{display:none !important;}ng\:form{display:block;}.ng-animate-block-transitions{transition:0s all!important;-webkit-transition:0s all!important;}</style>
+<meta name="fragment" content="!">
 <meta charset="utf-8">
 <meta name="description" content="Scuba dive the blue wild in Fort Lauderdale and the Florida Keys. Scuba courses available for new divers thru divemaster. Speciality scuba lessons and dive trips.">
 <meta name="keywords" content="Scuba Diving, PADI, Open Water, Divemaster, Fort Lauderdale, Florida Keys">
 <meta name="author" content="Captain Markos">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="/vendor/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="/vendor/angular-1.2.16/angular.min.js?v=20140529"></script>
 <script type="text/javascript" src="/vendor/angular-1.2.16/angular-route.min.js"></script>
 <script type="text/javascript" src="/vendor/angular-1.2.16/angular-animate.min.js"></script>
@@ -15,7 +17,7 @@
 <link type="text/css" rel="stylesheet" href="/styles/bluewild.css">
 <link type="text/css" rel="stylesheet" href="/styles/bluewild-animations.css">
 <link type="image/x-icon" rel="SHORTCUT ICON" href="favicon.ico">
-<title class="ng-binding">Blue Wild - Scuba Courses</title>
+<title class="ng-binding">Blue Wild - Scuba Diving and Instruction</title>
 </head>
 <body data-status="ready">
 
@@ -38,10 +40,10 @@
     <div class="row">
         <div class="large-12 column nav">
             <ul class="inline-list">
-              <li class="no-margin-left"><a href="/"><i class="fa fa-home icon-font-size"></i></a></li>
-              <li><a data-ng-href="#!/courses" href="#!/courses">Scuba Courses</a></li>
-              <li><a data-ng-href="#!/aboutus" href="#!/aboutus">About Us</a></li>
-              <li><a class="hide-for-small-only" href="/divelog/index.php">Dive Log</a></li>
+              <li class="no-margin-left"><a data-ng-href="/" href="/"><i class="fa fa-home icon-font-size"></i></a></li>
+              <li><a data-ng-href="/courses" href="/courses">Scuba Courses</a></li>
+              <li><a data-ng-href="/aboutus" href="/aboutus">About Us</a></li>
+              <li><a href="/divelog/index.php" class="hide-for-small-only">Dive Log</a></li>
               <li><a href="/reefcreatures/index.php">Reef Creature Quiz</a></li>
             </ul>
         </div>
@@ -51,284 +53,27 @@
     <!-- NOTE: The animate service will automatically add .ng-enter and     -->
     <!-- .ng-leave to the element to trigger the CSS transition/animations. -->
     <!-- ngView:  --><div class="reveal-animation ng-scope">
-<!-- BEGIN: scuba_courses.html -->
+<!-- BEGIN: home.html -->
 <div class="row ng-scope">
-    <div class="large-12 columns no-padding panel-margin">
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
+      <li class="last-image"><a data-ng-href="courses/OW" href="courses/OW"><img src="/images/padi_learn.jpg" alt="Learn to Dive"></a></li>
+      <li class="last-image"><a data-ng-href="courses/OW" href="courses/OW"><img src="/images/padi_elearn.jpg" alt="Courses eLearning"></a></li>
+      <li class="last-image"><a data-ng-href="/courses/AOW" href="/courses/AOW"><img src="/images/padi_advanced.jpg" alt="PADI Advanced Open Water"></a></li>
+    </ul>
+</div>
+
+<div class="row ng-scope">
+    <div class="small-12 large-12 columns no-padding antialised">
         <div class="panel">
-            <!-- BEGIN: Discover Scuba Diving -->
-            <!-- ============================ -->
-            <div class="panel" id="DSD">
-                <div class="row">
-                    <div class="medium-4 large-4 columns"><img src="/images/tn_IMG_0258.jpg" alt="Discover Scuba Diving"></div>
-                    <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Discover Scuba Diving</h4>
-                        <div class="large-12 columns no-padding">
-                            <ul class="pricing-table">
-                              <li class="title text-left">1 person <span class="price-color">| $175 |</span></li>
-                              <li class="title text-left">2+ persons <span class="price-color">| $150 |</span></li>
-                            </ul>
-                        </div>
-                        <p>The Discover Scuba Diving course will let you give scuba a try without the work of doing the actual certification.  While not an actual scuba certification, during the Discover Scuba Diving course you'll learn the basics of how to use scuba equipment in shallow water and get a quick and easy introduction to what it takes to explore the underwater world.</p>
-                        <ul>
-                          <li>Sit in on a short video and lecture session.</li>
-                          <li>Learn to use the equipment in the pool with a PADI Instructor.</li>
-                          <li>Dive the reef with the PADI Instructor.</li>
-                          <li>All scuba equipment provided.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- ========================== -->
-            <!-- END: Discover Scuba Diving -->
+            <p>SCUBA diving the Fort Lauderdale area and the Florida Keys.  Here we are your guides to diving the blue wild.</p>
 
-            <!-- BEGIN: Open Water Diver -->
-            <!-- ======================= -->
-            <div class="panel" id="OW">
-                <div class="row">
-                    <div class="medium-4 large-4 columns"><img src="/images/open_water.jpg" alt="Open Water Certification"></div>
-                    <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Open Water</h4>
-                        <div class="large-12 columns no-padding">
-                            <ul class="pricing-table">
-                              <li class="title text-left">Traditional <span class="price-color">| $550 |</span></li>
-                              <li class="title text-left">e-learning <span class="price-color">| $400 |</span></li>
-                            </ul>
-                        </div>
-                        <p>The PADI Open Water Diver certification consists of <strong>three</strong> sections.</p>
-                        <ul>
-                          <li>The knowledge development portion establishes a foundation of principles, procedures and general information that divers need.  A multiple choice final exam is administered at the conclusion of the academics.</li>
-                          <li>Confined water dives where students learn the basic skills with SCUBA gear in a low stress environment (swimming pool).  Here an introduction to equipment is learned.  This portion reinforces and supplements the knowledge development training.</li>
-                          <li>Open water dives are performed in the ocean where the student practices the basic skills learned in the confined water dives.  There are four open water dives required and during these dives, there is plenty of time to relax and enjoy the underwater experience.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- ===================== -->
-            <!-- END: Open Water Diver -->
+            <p>If you've found yourself here and are looking to do some scuba diving, you found the right place. We teach <a style="color:#ffff00;" class="bwlink" data-ng-href="/courses" href="/courses">PADI courses</a> from Discover Scuba Diving, Open Water all the way to Divemaster and specialities. Located in Hollywood, Florida makes us centrally located to the South Florida diving.  While we mostly scuba dive the Fort Lauderdale area, we often dive out of Pompano Beach as well as the Florida Keys.</p>
 
-            <!-- BEGIN: Advanced Open Water -->
-            <!-- ========================== -->
-            <div class="panel" id="AOW">
-                <div class="row">
-                    <div class="medium-4 large-4 columns"><img src="/images/advanced_open_water.jpg" alt="Advanced Open Water"></div>
-                    <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Advanced Open Water</h4>
-                        <div class="large-12 columns no-padding">
-                            <ul class="pricing-table">
-                              <li class="title text-left">Standard <span class="price-color">| $350 |</span></li>
-                              <li class="title text-left">Standard + gear <span class="price-color">| $500 |</span></li>
-                            </ul>
-                        </div>
-                        <p>The PADI Advanced Open Water certification is a continuation of the Open Water course.  Here a total of five dives will be conducted with the instructor where there will be more emphasis on the dives to be performed. Of the five required speciality dives, the student must complete:</p>
-                        <ul class="list-style-dots">
-                          <li>Underwater Navigation</li>
-                          <li>Deep Dive</li>
-                        </ul>
-                        <p>The student chooses three elective speciality dives:</p>
-                        <ul class="list-style-dots">
-                          <li>Wreck Dive</li>
-                          <li>Search &amp; Recovery</li>
-                          <li>Underwater Naturalist</li>
-                          <li>Underwater Photography</li>
-                          <li>Night Dive</li>
-                          <li>Peak Performance Buoyancy</li>
-                          <li>Diver Propulsion Vehicle</li>
-                          <li>Drift Dive</li>
-                          <li>AWARE - Fish Identification</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- ======================== -->
-            <!-- END: Advanced Open Water -->
-
-            <!-- BEGIN: Rescue Diver -->
-            <!-- =================== -->
-            <div class="panel" id="RS">
-                <div class="row">
-                    <div class="medium-4 large-4 columns"><img src="/images/rescue_diver.jpg" alt="Rescue Diver"></div>
-                    <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Rescue Diver</h4>
-                        <div class="large-12 columns no-padding">
-                            <ul class="pricing-table">
-                              <li class="title text-left">Traditional <span class="price-color">| $500 |</span></li>
-                              <li class="title text-left">e-learning <span class="price-color">| $350 |</span></li>
-                            </ul>
-                        </div>
-                        <p>Includes:</p>
-                        <ul>
-                          <li>All lectures and pool sessions</li>
-                          <li>Course materials and books</li>
-                          <li>4 Open Water Dives (dive accident scenerios)</li>
-                          <li>The Psychology of Rescue (self rescue and diver stress)</li>
-                          <li>Emergency Oxygen Delivery Systems</li>
-                          <li>Automated External Defibrillator (AED)</li>
-                          <li>Accident Management</li>
-                          <li>Responding to Diver Emergencies</li>
-                          <li>10 Rescue Training &amp; Rescue Scenarios (confined water)</li>
-                          <li>4 Resuce Scenarios (open water)</li>
-                          <li>PADI Certification fees</li>
-                        </ul>
-                        <p>Student provides:</p>
-                        <ul>
-                          <li>Advanced Open Water certification with 20 or more logged dives.</li>
-                          <li>Scuba equipment: BCD, regulator, octopus, mask, fins, snorkel</li>
-                          <li>Scuba equipment rental is available.</li>
-                          <li>Minimum 12 years of age (under 15 years old obtains PADI Junior Rescue Diver certification).</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- =================== -->
-            <!-- BEGIN: Rescue Diver -->
-
-            <!-- BEGIN: Divemaster -->
-            <!-- ================= -->
-            <div class="panel" id="DM">
-                <div class="row">
-                    <div class="medium-4 large-4 columns"><img src="/images/divemaster_alex.jpg" alt="Divemaster"></div>
-                    <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Divemaster</h4>
-                        <div class="large-12 columns no-padding">
-                            <ul class="pricing-table">
-                              <li class="title text-left">Standard <span class="price-color">| $575 |</span></li>
-                              <li class="title text-left">Standard + materials <span class="price-color">| $1000 </span>|</li>
-                            </ul>
-                        </div>
-                        <p>Includes:</p>
-                        <ul>
-                          <li>All lectures and pool sessions</li>
-                          <li>Course materials and books</li>
-                          <li>10 Open Water Dives</li>
-                          <li>Water skills and stamina</li>
-                          <li>Dive Theory</li>
-                          <li>Physics and Physiology</li>
-                          <li>SCUBA Equipment Study</li>
-                          <li>Rescue Assessment</li>
-                          <li>Watermanship Skills</li>
-                          <li>Emergency Management</li>
-                          <li>18 Basic Scuba Skills (training exercises)</li>
-                          <li>5 Academic Examinations</li>
-                          <li>PADI Crew Pak (includes instructor manual)</li>
-                          <li>PADI Application Fees</li>
-                        </ul>
-                        <p>Student provides:</p>
-                        <ul>
-                          <li>Rescue Diver certification with 40 or more logged dives</li>
-                          <li>Medical examination for diving by a physician attesting to fitness to dive</li>
-                          <li>Proof of Emergency First Response (CPR and First Aid)</li>
-                          <li>Minimum 18 years of age.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- =============== -->
-            <!-- END: Divemaster -->
-
-
-            <!-- BEGIN: Scuba Refresher  -->
-            <!-- ======================= -->
-            <div class="panel" id="TUNEUP">
-                <div class="row">
-                    <div class="medium-4 large-4 columns"><img src="/images/scuba_refresher1.jpg" alt="Scuba Refresher / Tune-up"></div>
-                    <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Scuba Refresher / Tune-up</h4>
-                        <div class="large-12 columns no-padding">
-                            <ul class="pricing-table">
-                              <li class="title text-left">Traditional <span class="price-color">| $175 |</span></li>
-                              <li class="title text-left">Including Gear <span class="price-color">| $240 |</span></li>
-                            </ul>
-                        </div>
-                        <p>Has it been a while since you or your family have been diving?  Would you like an extra boost of confidence before going out on that long awaited dive vacation?  Refresh your knowledge and skills with a pool training session and open water dive.</p>
-                        <p>Includes:</p>
-                        <ul>
-                          <li>Knowledge reviews and short quiz to refresh your academic skills</li>
-                          <li>Pool session to refresh your Open Water skills</li>
-                          <li>2-Tank boat dive with the instructor</li>
-                        </ul>
-                        <p>You must be Open Water or above certified.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- ===================== -->
-            <!-- END: Scuba Refresher  -->
-
-            <!-- BEGIN: Beach Dive -->
-            <!-- ============= -->
-            <div class="panel" id="BEACH-DIVE">
-                <div class="row">
-                    <div class="medium-4 large-4 columns"><img src="/images/beach_dive_pic1.jpg" alt="Beach Dive"></div>
-                    <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Beach Dive</h4>
-                        <div class="large-12 columns no-padding">
-                            <ul class="pricing-table">
-                              <li class="title text-left">Guided <span class="price-color">| $40 |</span></li>
-                              <li class="title text-left">Guided + gear <span class="price-color">| $100 |</span></li>
-                            </ul>
-                        </div>
-                        <p>We have our favorite beach dive sites however there's several to choose from.  With the proper visibility, which occurs regularly, this is a great time to take underwater pictures.  Beach dives are ~60 minutes bottom time with a depth no greater than 25 ft.</p>
-                        <ul>
-                          <li>You must be Open Water or above certified.</li>
-                          <li>Gear rental is available.</li>
-                        </ul>
-                        <p>Check out our Discover Scuba Diving course if you're not certified and want to do a beach dive.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- END: Beach Dive -->
-            <!-- ================ -->
-
-            <!-- BEGIN: Divemaster Guide -->
-            <!-- ======================= -->
-            <div class="panel" id="DIVEMASTER-GUIDE">
-                <div class="row">
-                    <div class="medium-4 large-4 columns"><img src="/images/divemaster_guide1.jpg" alt="Divemaster Guide"></div>
-                    <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Divemaster Guide</h4>
-                        <div class="large-12 columns no-padding">
-                            <ul class="pricing-table">
-                              <li class="title text-left">1 Person <span class="price-color">| $40 |</span></li>
-                              <li class="title text-left">2+ People <span class="price-color">| $20 |</span></li>
-                              <li class="title text-left">1 Person + gear <span class="price-color">| $100 |</span></li>
-                              <li class="title text-left">2+ People + gear <span class="price-color">| $75 |</span></li>
-                            </ul>
-                        </div>
-                        <p>Consider the possible scenarios:</p>
-                        <ul>
-                          <li>You only scuba dive only when on vacation once/twice a year.</li>
-                          <li>Your family only dives when on vacation perhaps once a year.</li>
-                          <li>You have never been diving here before.</li>
-                          <li>You just feel more relaxed having a guide and/or for safety.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <!-- END: Divemaster Guide -->
-            <!-- ===================== -->
-
-            <!-- BEGIN: Nitrox -->
-            <!-- ============= -->
-            <div class="panel" id="EANX">
-                <div class="row">
-                    <div class="medium-4 large-4 columns"><img src="/images/nitrox.jpg" alt="Enriched Air / Nitrox Speciality"></div>
-                    <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Enriched Air Nitrox</h4>
-                        <div class="large-12 columns no-padding">
-                            <ul class="pricing-table">
-                              <li class="title text-left">Traditional <span class="price-color">| $225 |</span></li>
-                              <li class="title text-left">e-learning <span class="price-color">| $275 |</span></li>
-                            </ul>
-                        </div>
-                        <p>Air consists of approximately 79 percent nitrogen and 21 percent oxygen. Enriched air has been enriched with oxygen, so it has more than 21 percent oxygen. Enriched air, often just referred to as nitrox, is any nitrogen/oxygen gas blend with more than 21 percent oxygen.<br><br>You'll be learning to use enriched air with from 22 percent to the maximum 40 percent oxygen recommended for recreational diving.<br><br>The course includes knowledge reviews and a final exam followed by two training dives that allow the student to learn and demonstrate mastery of enriched air diving principles.</p>
-                    </div>
-                </div>
-            </div>
-            <!-- END: Nitrox -->
-            <!-- =========== -->
+            <p>Need to take a <a style="color:#ffff00;" class="bwlink" data-ng-href="/courses/TUNEUP" href="/courses/TUNEUP">scuba refresher course</a>?  Looking for a <a style="color:#ffff00;" class="bwlink" data-ng-href="/courses/DIVEMASTER-GUIDE" href="/courses/DIVEMASTER-GUIDE">divemaster guide</a>?  How about a <a style="color:#ffff00;" class="bwlink" data-ng-href="/courses/BEACH-DIVE" href="/courses/BEACH-DIVE">beach dive</a>?  Want to continue your scuba education or perhaps become a PADI <a style="color:#ffff00;" class="bwlink" data-ng-href="/courses/DM" href="/courses/DM">Divemaster</a>?  We are a husband / wife small business and there's a lot we can do in regards to your SCUBA diving adventures.  Check us out and feel free to contact us with any questions.</p>
         </div>
     </div>
 </div>
-<!-- END: scuba_courses.html -->
+<!-- END: home.html -->
 </div>
 
 
