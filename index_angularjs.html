@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html id="ng-app" data-ng-app="bw2" data-ng-controller="MainCtrl" class="no-js" lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="fragment" content="!">
+<meta name="description" content="cuba dive the blue wild in Fort Lauderdale and the Florida Keys. Scuba courses available for new divers thru divemaster. Speciality scuba lessons and dive trips." />
+<meta name="keywords" content="Scuba Diving, PADI, Open Water, Divemaster, Fort Lauderdale, Florida Keys" />
+<meta name="author" content="Captain Markos" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<script type="text/javascript" src="/vendor/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/vendor/angular-1.2.16/angular.min.js?v=20140529"></script>
+<script type="text/javascript" src="/vendor/angular-1.2.16/angular-route.min.js"></script>
+<script type="text/javascript" src="/vendor/angular-1.2.16/angular-animate.min.js"></script>
+<script type="text/javascript" src="/js/controllers.js?v=20140603"></script>
+<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400" />
+<link type="text/css" rel="stylesheet" href="/vendor/font-awesome-4.1.0/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="/styles/foundation.css" />
+<link type="text/css" rel="stylesheet" href="/styles/normalize.css" />
+<link type="text/css" rel="stylesheet" href="/styles/bluewild.css" />
+<link type="text/css" rel="stylesheet" href="/styles/bluewild-animations.css" />
+<link type="image/x-icon" rel="SHORTCUT ICON" href="favicon.ico" />
+<title>{{ Page.title(); }}</title>
+</head>
+<body data-status="{{ status }}">
+
+    <header>
+        <div class="row offset-top">
+            <div class="small-12 medium-6 large-6 columns no-padding small-only-text-center">
+                <h3>dive the blue wild</h3>
+            </div>
+            <div class="small-12 medium-6 large-6 columns contact-info small-only-text-center">
+                <a href="tel:19542135067"><i class="fa fa-phone"></i> : (954) 213-5067</a>&nbsp;&nbsp;
+                <br class="show-for-small-only" />
+                <br class="show-for-small-only" />
+                <a href="mailto:bluewildscuba@gmail.com" target="_blank">
+                <i class="fa fa-envelope"></i> : bluewildscuba@gmail.com</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- navbar -->
+    <div class="row">
+        <div class="large-12 column nav">
+            <ul class="inline-list">
+              <li class="no-margin-left"><a data-ng-href="/"><i class="fa fa-home icon-font-size"></i></a></li>
+              <li><a data-ng-href="/courses">Scuba Courses</a></li>
+              <li><a data-ng-href="/aboutus">About Us</a></li>
+              <li><a href="/divelog/index.php" target="_self" class="hide-for-small-only">Dive Log</a></li>
+              <li><a href="/reefcreatures/index.php" target="_self">Reef Creature Quiz</a></li>
+            </ul>
+        </div>
+    </div>
+
+
+    <!-- NOTE: The animate service will automatically add .ng-enter and     -->
+    <!-- .ng-leave to the element to trigger the CSS transition/animations. -->
+    <div class="reveal-animation"  data-ng-view></div>
+
+</body>
+</html>

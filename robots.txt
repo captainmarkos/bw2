@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /views/
+Disallow: /vendor/
+Disallow: /js/
+Disallow: /tracks/
+Disallow: /make-snapshot.sh
+Disallow: /index_angularjs.html
