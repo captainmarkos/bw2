@@ -31,6 +31,10 @@ body {
     height: 100%;
 }
 
+header {
+    margin-bottom: 10px;
+}
+
 .last-image {
     cursor: pointer;
 }
@@ -63,7 +67,7 @@ body {
 .contact-info {
     font-weight: 200;
     font-size: .85em;
-    padding: 1.5rem 0 0 0;
+    padding: 4.7rem 0 0 0;
     text-align: right;
 }
 
