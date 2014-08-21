@@ -35,6 +35,11 @@ body {
     cursor: pointer;
 }
 
+#logo-image {
+    width: 200px;
+    height: 89px;
+}
+
 .panel-margin {
     margin-top: 3% !important;
 }
@@ -44,7 +49,7 @@ body {
 }
 
 .offset-top {
-    margin-top: 5% !important;
+    margin-top: 1% !important;
 }
 
 .no-margin-left {
