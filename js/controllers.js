@@ -5,17 +5,26 @@ var app = angular.module('bw2', ['ngRoute', 'ngAnimate']);
 
 // Configure the routes for our app.
 app.config(function($routeProvider, $locationProvider, $provide) {
-
-    $locationProvider.html5Mode(true);
-    $locationProvider.hashPrefix('!');
-
     $routeProvider
-        .when('/', { controller: 'MainCtrl', templateUrl: '/views/home.html' })
-        .when('/home', { controller: 'MainCtrl', templateUrl: '/views/home.html' })
-        .when('/courses', { controller: 'CoursesCtrl', templateUrl: '/views/scuba_courses.html' })
-        .when('/courses/:course_id', { controller: 'CourseDetailCtrl', templateUrl: '/views/scuba_courses.html' })
-        .when('/aboutus', { controller: 'AboutUsCtrl', templateUrl: '/views/about_us.html' })
-        .otherwise({ redirectTo: '/home' });
+        .when('/', {
+            controller: 'MainCtrl',
+            templateUrl: 'views/home.html' })
+        .when('/home', {
+            controller: 'MainCtrl',
+            templateUrl: 'views/home.html' })
+        .when('/courses', {
+            controller: 'CoursesCtrl',
+            templateUrl: 'views/scuba_courses.html' })
+        .when('/courses/:course_id', {
+            controller: 'CourseDetailCtrl',
+            templateUrl: 'views/scuba_courses.html' })
+        .when('/aboutus', {
+            controller: 'AboutUsCtrl',
+            templateUrl: 'views/about_us.html' })
+        .otherwise({
+            redirectTo: '/home' });
+
+        $locationProvider.hashPrefix('!');
 });
 
 app.factory('Page', function() {

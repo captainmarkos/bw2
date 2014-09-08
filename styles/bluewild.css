@@ -10,7 +10,7 @@
 }
 
 body {
-    background-image: url('/images/underwater_gradient_1.jpg');
+    background-image: url('images/underwater_gradient_1.jpg');
     background-color: #014ea6;
     background-repeat: repeat-x;
     background-position: center top;
@@ -290,7 +290,7 @@ header {
 @media only screen and (min-width: 40.063em) and (max-width: 64em) {
     /* min-width 641px and max-width 1024px, use when QAing tablet-only issues */
     body {
-        background-image: url('/images/underwater_background_shorter_max_width_1024.jpg');
+        background-image: url('images/underwater_background_shorter_max_width_1024.jpg');
         background-repeat: no-repeat;
         background-position: center top;
         background-color: #014ea6;
