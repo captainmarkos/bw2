@@ -14,8 +14,12 @@
 <link type="text/css" rel="stylesheet" href="/styles/bluewild-animations.css" />
 <link type="image/x-icon" rel="SHORTCUT ICON" href="favicon.ico" />
 <title>blue wild scuba: courses</title>
+
+<script type="text/javascript" src="/vendor/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bluewildscuba.js"></script>
+
 </head>
-<body>
+<body id="TOP">
 
     <header>
         <div class="row offset-top">
@@ -49,13 +53,78 @@
 <div class="row">
     <div class="large-12 columns no-padding panel-margin">
         <div class="panel">
+
+            <div class="panel">
+                <div class="row course-menu-item">
+                    <!-- right side -->
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                    <div class="medium-3 large-3 columns">
+                        <span onclick="scrollTo('DSD');">Discover Scuba Diving</span></div>
+                    <!-- left side -->
+                    <div class="medium-3 large-3 columns">
+                    <span onclick="scrollTo('TUNEUP');">Scuba Refersher</span></div>
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                </div>
+
+                <div class="row course-menu-item">
+                    <!-- right side -->
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                    <div class="medium-3 large-3 columns">
+                        <span onclick="scrollTo('OW');">Open Water</span></div>
+                    <!-- left side -->
+                    <div class="medium-3 large-3 columns">
+                        <span onclick="scrollTo('BEACH-DIVE');">Beach Dive</span></div>
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                </div>
+
+                <div class="row course-menu-item">
+                    <!-- right side -->
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                    <div class="medium-3 large-3 columns">
+                        <span onclick="scrollTo('AOW');">Advanced Open Water</span></div>
+                    <!-- left side -->
+                    <div class="medium-3 large-3 columns">
+                        <span onclick="scrollTo('DIVEMASTER-GUIDE');">Divemaster Guide</span></div>
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                </div>
+
+
+                <div class="row course-menu-item">
+                    <!-- right side -->
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                    <div class="medium-3 large-3 columns">
+                        <span onclick="scrollTo('RS');">Rescue Diver</span></div>
+                    <!-- left side -->
+                    <div class="medium-3 large-3 columns">
+                        <span onclick="scrollTo('EANX');">Enriched Air Nitrox</span></div>
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                </div>
+
+                <div class="row course-menu-item">
+                    <!-- right side -->
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                    <div class="medium-3 large-3 columns">
+                        <span onclick="scrollTo('DM');">Divemaster</span>
+                    </div>
+                    <!-- left side -->
+                    <div class="medium-3 large-3 columns">
+                        <span>&nbsp;</span>
+                    </div>
+                    <div class="medium-3 large-3 columns">&nbsp;</div>
+                </div>
+            </div>
+
             <!-- BEGIN: Discover Scuba Diving -->
             <!-- ============================ -->
             <div class="panel" id="DSD">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/tn_IMG_0258.jpg" alt="Discover Scuba Diving" /></div>
                     <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Discover Scuba Diving</h4>
+                        <h4 class="course-title">
+                            Discover Scuba Diving
+                            <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
+                        </h4>
+
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">1 person <span class="price-color">| $175 |</span></li>
@@ -81,7 +150,10 @@
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/open_water.jpg" alt="Open Water Certification" /></div>
                     <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Open Water</h4>
+                        <h4 class="course-title">
+                            Open Water
+                            <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
+                        </h4>
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">Traditional <span class="price-color">| $550 |</span></li>
@@ -106,7 +178,11 @@
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/advanced_open_water.jpg" alt="Advanced Open Water" /></div>
                     <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Advanced Open Water</h4>
+                        <h4 class="course-title">
+                            Advanced Open Water
+                            <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
+                        </h4>
+
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">Standard <span class="price-color">| $350 |</span></li>
@@ -142,7 +218,11 @@
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/rescue_diver.jpg" alt="Rescue Diver" /></div>
                     <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Rescue Diver</h4>
+                        <h4 class="course-title">
+                            Rescue Diver
+                            <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
+                        </h4>
+
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">Traditional <span class="price-color">| $500 |</span></li>
@@ -182,7 +262,10 @@
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/divemaster_alex.jpg" alt="Divemaster" /></div>
                     <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Divemaster</h4>
+                        <h4 class="course-title">
+                            Divemaster
+                            <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
+                        </h4>
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">Standard <span class="price-color">| $575 |</span></li>
@@ -226,7 +309,11 @@
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/scuba_refresher1.jpg" alt="Scuba Refresher / Tune-up" /></div>
                     <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Scuba Refresher / Tune-up</h4>
+                        <h4 class="course-title">
+                            Scuba Refresher / Tune-up
+                            <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
+                        </h4>
+
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">Traditional <span class="price-color">| $175 |</span></li>
@@ -253,7 +340,11 @@
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/beach_dive_pic1.jpg" alt="Beach Dive" /></div>
                     <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Beach Dive</h4>
+                        <h4 class="course-title">
+                            Beach Dive
+                            <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
+                        </h4>
+
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">Guided <span class="price-color">| $40 |</span></li>
@@ -278,7 +369,10 @@
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/divemaster_guide1.jpg" alt="Divemaster Guide" /></div>
                     <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Divemaster Guide</h4>
+                        <h4 class="course-title">
+                            Divemaster Guide
+                            <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
+                        </h4>
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">1 Person <span class="price-color">| $40 |</span></li>
@@ -306,7 +400,10 @@
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/nitrox.jpg" alt="Enriched Air / Nitrox Speciality" /></div>
                     <div class="medium-8 large-8 columns">
-                        <h4 class="course-title">Enriched Air Nitrox</h4>
+                        <h4 class="course-title">
+                            Enriched Air Nitrox
+                            <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
+                        </h4>
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">Traditional <span class="price-color">| $225 |</span></li>

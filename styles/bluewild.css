@@ -44,6 +44,24 @@ header {
     height: 89px;
 }
 
+.course-menu-item {
+    padding: 0 1.25em 0 1.25em;
+    color: #ffff00;
+}
+
+.menu-item-thumbnail {
+    height: 20px;
+    border-radius: .25em;
+}
+
+.scrollto-top-link {
+    font-size: .45em;
+    padding-right: .5em;
+    float: right;
+    color: #ffff00;
+    cursor: pointer;
+}
+
 .panel-margin {
     margin-top: 3% !important;
 }
@@ -73,7 +91,7 @@ header {
 
 /* Pricing Tables */
 .price-color {
-  color:#ffff00;
+  color:#ffffff;
   font-weight: 400;
 }
 .pricing-table {

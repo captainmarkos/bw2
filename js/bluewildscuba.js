@@ -14,4 +14,8 @@ var facebook_like_button = function(_href) {
     return snip;
 };
 
-console.log('--> facebook_like_button: ' + facebook_like_button('http://www.bluewildscuba.com'));
+var scrollTo = function(id) {
+     $('html, body').animate({
+        scrollTop: $('#' + id).offset().top
+    }, 700);
+};
