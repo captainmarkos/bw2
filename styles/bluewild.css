@@ -45,8 +45,13 @@ header {
 }
 
 .course-menu-item {
-    padding: 0 1.25em 0 1.25em;
+    padding: .3em;
+    text-align: center;
+}
+
+.menu-item-title {
     color: #ffff00;
+    cursor: pointer;
 }
 
 .menu-item-thumbnail {
