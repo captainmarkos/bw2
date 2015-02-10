@@ -1,5 +1,53 @@
 /* core css used from foundation css */
 
+/* Begin Accordion */
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+    border: 1px solid white;
+    background: #014ea6 url("images/ui-bg_glass_65_ffffff_1x400.png") 50% 50% repeat-x;
+    font-weight: bold;
+    color: white;
+}
+
+.ui-widget-content {
+    border: 1px solid white;
+    background: #014ea6 url("images/ui-bg_highlight-soft_100_eeeeee_1x100.png") 50% top repeat-x;
+    color: white;
+    width: 100%;
+}
+
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+    border: 1px solid white;
+    background: #014ea6 url("images/ui-bg_glass_100_f6f6f6_1x400.png") 50% 50% repeat-x;
+    font-weight: bold;
+    color: white;
+}
+
+.acc_header {
+    margin :0px;
+}
+
+.acc_header:hover {
+    opacity: 0.6;
+}
+.acc_header h4 {
+    display: inline;
+    padding-left: 2em;
+    color: yellow;
+}
+
+.acc_header p {
+    float: right;
+}
+
+.acc_container {
+    padding: 1em;
+}
+
+.stretch {
+    height: 2400px;
+}
+/* End Accordion */
 
 .selected {
     color: #ffff00 !important;

@@ -8,6 +8,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400" />
 <link type="text/css" rel="stylesheet" href="/vendor/font-awesome-4.1.0/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="/vendor/jquery-ui-1.11.2.custom/jquery-ui.min.css"/>
 <link type="text/css" rel="stylesheet" href="/styles/foundation.css" />
 <link type="text/css" rel="stylesheet" href="/styles/normalize.css" />
 <link type="text/css" rel="stylesheet" href="/styles/bluewild.css" />
@@ -15,10 +16,24 @@
 <title>Blue Wild Scubab: courses</title>
 
 <script type="text/javascript" src="/vendor/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="/vendor/jquery-ui-1.11.2.custom/jquery-ui.min.js"></script>
 <script type="text/javascript" src="js/bluewildscuba.js"></script>
 
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+    console.log('--> DOM is loaded');
+    //anchor_to();
+    console.log(location.hash);
+
+});
+
+</script>
 </head>
 <body id="TOP">
+
+  <div class="stretch">
 
     <header>
         <div class="row offset-top">
@@ -115,7 +130,16 @@
 
             <!-- BEGIN: Discover Scuba Diving -->
             <!-- ============================ -->
-            <div class="panel" id="DSD">
+            <div id="accordion">
+            <h1 id="DSD">
+                <div class="acc_header" id="DSD">
+                    <img src="/images/tn_IMG_0258_thumbnail.jpg"/>
+                    <h4>Discover Suba</h4>
+                    <p>Prices starting at $175</p>
+                </div>
+            </h1>
+            <div class="acc_container">
+            <div class="panel">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/tn_IMG_0258.jpg" alt="Discover Scuba Diving" /></div>
                     <div class="medium-8 large-8 columns">
@@ -124,6 +148,7 @@
                             <span class="scrollto-top-link" onclick="scrollTo('TOP');">TOP</span>
                         </h4>
 
+                        <div>
                         <div class="large-12 columns no-padding">
                             <ul class="pricing-table">
                               <li class="title text-left">1 person <span class="price-color">| $175 |</span></li>
@@ -138,14 +163,24 @@
                           <li>All scuba equipment provided.</li>
                         </ul>
                     </div>
+                  </div>
                 </div>
+            </div>
             </div>
             <!-- ========================== -->
             <!-- END: Discover Scuba Diving -->
 
             <!-- BEGIN: Open Water Diver -->
             <!-- ======================= -->
-            <div class="panel" id="OW">
+            <h1 id="OW">
+                <div class="acc_header">
+                    <img src="/images/open_water_thumbnail.jpg"/>
+                    <h4>Open Water Diver</h4>
+                    <p>Prices starting at $550</p>
+                </div>
+            </h1>
+            <div class="acc_container">
+            <div class="panel">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/open_water.jpg" alt="Open Water Certification" /></div>
                     <div class="medium-8 large-8 columns">
@@ -168,12 +203,21 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- ===================== -->
             <!-- END: Open Water Diver -->
 
             <!-- BEGIN: Advanced Open Water -->
             <!-- ========================== -->
-            <div class="panel" id="AOW">
+            <h1 id="AOW">
+                <div class="acc_header">
+                    <img src="/images/advanced_open_water_thumbnail.jpg"/>
+                    <h4>Advanced Open Water</h4>
+                    <p>Prices starting at $350</p>
+                </div>
+            </h1>
+            <div class="acc_container">
+            <div class="panel">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/advanced_open_water.jpg" alt="Advanced Open Water" /></div>
                     <div class="medium-8 large-8 columns">
@@ -208,12 +252,21 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- ======================== -->
             <!-- END: Advanced Open Water -->
 
             <!-- BEGIN: Rescue Diver -->
             <!-- =================== -->
-            <div class="panel" id="RS">
+            <h1 id="RS">
+                <div class="acc_header">
+                    <img src="/images/rescue_diver_thumbnail.jpg"/>
+                    <h4>Rescue Diver</h4>
+                    <p>Prices starting at $500</p>
+                </div>
+            </h1>
+            <div class="acc_container">
+            <div class="panel">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/rescue_diver.jpg" alt="Rescue Diver" /></div>
                     <div class="medium-8 large-8 columns">
@@ -252,12 +305,21 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- =================== -->
             <!-- BEGIN: Rescue Diver -->
 
             <!-- BEGIN: Divemaster -->
             <!-- ================= -->
-            <div class="panel" id="DM">
+            <h1 id="DM">
+                <div class="acc_header">
+                    <img src="/images/divemaster_alex_thumbnail.jpg"/>
+                    <h4>Divemaster</h4>
+                    <p>Prices starting at $575</p>
+                </div>
+            </h1>
+            <div class="acc_container">
+            <div class="panel">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/divemaster_alex.jpg" alt="Divemaster" /></div>
                     <div class="medium-8 large-8 columns">
@@ -298,13 +360,22 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- =============== -->
             <!-- END: Divemaster -->
 
 
             <!-- BEGIN: Scuba Refresher  -->
             <!-- ======================= -->
-            <div class="panel" id="TUNEUP">
+            <h1 id="TUNEUP">
+                <div class="acc_header">
+                    <img src="/images/scuba_refresher1_thumbnail.jpg"/>
+                    <h4>Scuba Refresher</h4>
+                    <p>Prices starting at $175</p>
+                </div>
+            </h1>
+            <div class="acc_container">
+            <div class="panel">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/scuba_refresher1.jpg" alt="Scuba Refresher / Tune-up" /></div>
                     <div class="medium-8 large-8 columns">
@@ -330,12 +401,21 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- ===================== -->
             <!-- END: Scuba Refresher  -->
 
             <!-- BEGIN: Beach Dive -->
             <!-- ============= -->
-            <div class="panel" id="BEACH-DIVE">
+            <h1 id="BEACH-DIVE">
+                <div class="acc_header">
+                    <img src="/images/beach_dive_pic1_thumbnail.jpg"/>
+                    <h4>Beach Dive</h4>
+                    <p>Prices starting at $40</p>
+                </div>
+            </h1>
+            <div class="acc_container">
+            <div class="panel">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/beach_dive_pic1.jpg" alt="Beach Dive" /></div>
                     <div class="medium-8 large-8 columns">
@@ -359,12 +439,21 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- END: Beach Dive -->
             <!-- ================ -->
 
             <!-- BEGIN: Divemaster Guide -->
             <!-- ======================= -->
-            <div class="panel" id="DIVEMASTER-GUIDE">
+            <h1 id="DIVEMASTER-GUIDE">
+                <div class="acc_header">
+                    <img src="/images/divemaster_guide1_thumbnail.jpg"/>
+                    <h4>Divemaster Guide</h4>
+                    <p>Prices starting at $40</p>
+                <div>
+            </h1>
+            <div class="acc_container">
+            <div class="panel">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/divemaster_guide1.jpg" alt="Divemaster Guide" /></div>
                     <div class="medium-8 large-8 columns">
@@ -390,12 +479,21 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- END: Divemaster Guide -->
             <!-- ===================== -->
 
             <!-- BEGIN: Nitrox -->
             <!-- ============= -->
-            <div class="panel" id="EANX">
+            <h1 id="EANX">
+                <div class="acc_header">
+                    <img src="/images/nitrox_thumbnail.jpg"/>
+                    <h4>Nitrox</h4>
+                    <p>Prices starting at $225</p>
+                </div>
+            </h1>
+            <div class="acc_container">
+            <div class="panel">
                 <div class="row">
                     <div class="medium-4 large-4 columns"><img src="/images/nitrox.jpg" alt="Enriched Air / Nitrox Speciality" /></div>
                     <div class="medium-8 large-8 columns">
@@ -413,12 +511,16 @@
                     </div>
                 </div>
             </div>
+            </div>
             <!-- END: Nitrox -->
             <!-- =========== -->
+            </div>
         </div>
     </div>
 </div>
 <!-- END: scuba_courses.html -->
+
+</div>
 
 </body>
 </html>

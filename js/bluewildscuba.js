@@ -15,7 +15,32 @@ var facebook_like_button = function(_href) {
 };
 
 var scrollTo = function(id) {
+    id.replace('#','');
+
      $('html, body').animate({
         scrollTop: $('#' + id).offset().top
     }, 700);
 };
+
+ /*var anchor_to = function(id){
+     var a = location.search;
+     console.log(a);
+
+ };*/
+
+ var click_scroll = function(){
+     $(document).ready(function(){
+         scrollTo(id);
+     });
+};
+
+//========Begin Accordion========>
+
+$(document).ready(function(){
+  $('#accordion').accordion({
+    heightStyle: "content"
+  });
+});
+
+var heightStyle = $('#accordion').accordion();
+$('#accordion').accordion();
