@@ -15,7 +15,11 @@ var facebook_like_button = function(_href) {
 };
 
 var scrollTo = function(id) {
-     $('html, body').animate({
-        scrollTop: $('#' + id).offset().top
-    }, 700);
+    try {
+         $('body, html').animate({
+            scrollTop: $('#' + id).offset().top
+        }, 700);
+    } catch(e) {
+        console.log('--> $.animate() did not work')
+    }
 };
