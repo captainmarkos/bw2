@@ -1,0 +1,47 @@
+.breakpoints_display {
+    width: 100%;
+    background: rgb(234, 234, 234);
+    position: fixed;
+    z-index: 5000;
+    bottom: 0;
+
+    .text_container {
+        h1 {
+            font-size: 2.75rem;
+            line-height: 1.4;
+            letter-spacing: normal;
+
+            :first-child {
+                margin-left: rem-calc(0);
+            }
+
+            .small_only {
+                display: none;
+                @media #{$small-only} {
+                    display: inherit !important;
+                }
+            }
+
+            .small_down {
+                display: none;
+                @media #{$small-down} {
+                    display: inherit !important;
+                }
+            }
+
+            .med_only {
+                display: none;
+                @media #{$medium-only} {
+                    display: inherit !important;
+                }
+            }
+
+            .large_only {
+                display: none;
+                @media #{$large-only} {
+                    display: inherit !important;
+                }
+            }
+        }
+    }
+}
