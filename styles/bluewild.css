@@ -9,6 +9,11 @@
     color: #ffffff !important;
 }
 
+.logo-style {
+    font-family: 'Quintessential', cursive;
+    font-size: 3em;
+}
+
 body {
     background-image: url('http://bluewildscuba.com/images/underwater_background_shorter_max_width_1024.jpg');
 
