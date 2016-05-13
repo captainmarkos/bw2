@@ -16,6 +16,7 @@
 
 <script type="text/javascript" src="/vendor/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/bluewildscuba.js"></script>
+<script type="text/javascript" src="vendor/moment.min.js"></script>
 <script type="text/javascript">
 
 $(document).ready(function() {
@@ -68,7 +69,12 @@ $(document).ready(function() {
     <div class="small-12 large-12 columns no-padding antialised">
         <div class="panel">
             <p>
-              Monday, May 30 2016 | 8:00 AM</br>
+              <script type="text/javascript">
+                  var dive_date = moment('2016-05-30').format('dddd MMMM DD YYYY');
+                  var dive_time = '8:00 AM';
+                  document.write(dive_date + ' | ' + dive_time);
+              </script>
+              </br>
               </br>
               <a href="">Hog Heaven</a> | depth 70ft
               </br>
