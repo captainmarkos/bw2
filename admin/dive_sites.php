@@ -13,7 +13,6 @@
 <link type="text/css" rel="stylesheet" href="/styles/bluewild.css" />
 <link type="image/x-icon" rel="SHORTCUT ICON" href="favicon.ico" />
 <title>Blue Wild Scuba: dive schedule</title>
-
 <script type="text/javascript" src="/vendor/jquery-2.1.1.min.js"></script>
 <script type="text/javascript" src="js/bluewildscuba.js"></script>
 <script type="text/javascript" src="vendor/moment.min.js"></script>
@@ -54,7 +53,7 @@ $(document).ready(function() {
         <div class="large-12 column nav">
             <ul class="inline-list">
               <li class="no-margin-left"><a href="/"><i class="fa fa-home icon-font-size"></i></a></li>
-              <li><a href="/dive_schedule.html">Dive Schedule</a></li>
+              <li><a href="/courses.html">Scuba Courses</a></li>
               <li><a href="/aboutus.html">About Us</a></li>
               <li><a href="/divelog/index.php" target="_self" class="hide-for-small-only">Dive Log</a></li>
               <li><a href="/reefcreatures/index.php" target="_self">Reef Creature Quiz</a></li>
@@ -83,78 +82,6 @@ $(document).ready(function() {
                   document.write(dive_date + ' | ' + dive_time);
               </script>
               </br>
-              </br>
-              <a href="">Hog Heaven</a> | depth 70ft
-              </br>
-              <a href="">Reef</a> | depth 30ft
-            </p>
-        </div>
-        <div class="panel">
-            <p>
-              Tuesday, May 31 2016 | 8:00 AM</br>
-              </br>
-              <a href="">Hog Heaven</a> | depth 70ft
-              </br>
-              <a href="">Reef</a> | depth 30ft
-            </p>
-        </div>
-        <div class="panel">
-            <p>
-              Wednesday, June 1 2016 | 8:00 AM</br>
-              </br>
-              <a href="">Hog Heaven</a> | depth 70ft
-              </br>
-              <a href="">Reef</a> | depth 30ft
-            </p>
-        </div>
-        <div class="panel">
-            <p>
-              Thrusday, June 2 2016 | 8:00 AM</br>
-              </br>
-              <a href="">Hog Heaven</a> | depth 70ft
-              </br>
-              <a href="">Reef</a> | depth 30ft
-            </p>
-        </div>
-        <div class="panel">
-            <p>
-              Friday, June 3 2016 | 8:00 AM</br>
-              </br>
-              <a href="">Hog Heaven</a> | depth 70ft
-              </br>
-              <a href="">Reef</a> | depth 30ft
-            </p>
-        </div>
-        <div class="panel">
-            <p>
-              Saturday, June 4 2016 | 8:00 AM</br>
-              </br>
-              <a href="">Hog Heaven</a> | depth 70ft
-              </br>
-              <a href="">Reef</a> | depth 30ft
-            </p>
-        </div>
-        <div class="panel">
-            <p>
-              Saturday, June 4 2016 | 1:00 PM</br>
-              </br>
-              <a href="">Hog Heaven</a> | depth 70ft
-              </br>
-              <a href="">Reef</a> | depth 30ft
-            </p>
-        </div>
-        <div class="panel">
-            <p>
-              Sunday, June 5 2016 | 8:00 AM</br>
-              </br>
-              <a href="">Hog Heaven</a> | depth 70ft
-              </br>
-              <a href="">Reef</a> | depth 30ft
-            </p>
-        </div>
-        <div class="panel">
-            <p>
-              Sunday, June 5 2016 | 1:00 PM</br>
               </br>
               <a href="">Hog Heaven</a> | depth 70ft
               </br>
