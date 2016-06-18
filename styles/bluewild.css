@@ -298,29 +298,33 @@ header {
   float: left;
 }
 
-.dive_schedule {
+.retail_prices {
+    width: 100%;
+}
+
+.retail_prices, .dive_schedule {
     background: none;
     border: none;
     margin-bottom: 40px;
 }
 
-.dive_schedule thead {
+.retail_prices thead, .dive_schedule thead {
     background: none;
 }
 
-.dive_schedule tbody tr td {
+.retail_prices tbody tr td, .dive_schedule tbody tr td {
     color: white;
 }
 
-.dive_schedule tbody tr td a {
+.retail_prices tbody tr td a, .dive_schedule tbody tr td a {
     color: #ffff00;
 }
 
-.dive_schedule tbody tr:nth-of-type(even) {
+.retail_prices tbody tr:nth-of-type(even), .dive_schedule tbody tr:nth-of-type(even) {
     background: none;
 }
 
-.dive_schedule tbody tr:nth-of-type(odd) {
+.retail_prices tbody tr:nth-of-type(odd), .dive_schedule tbody tr:nth-of-type(odd) {
     border-top: 1px solid white;
     border-bottom: 1px solid white;
 }
@@ -390,6 +394,10 @@ header {
     .small-11 { width: 91.66667%; }
 
     .small-12 { width: 100%; }
+
+    .retail_prices_container {
+        padding: 10px;
+    }
 }
 
 
@@ -438,6 +446,22 @@ header {
     .medium-11 { width: 91.66667%; }
 
     .medium-12 { width: 100%; }
+
+    .charter_image {
+        height: 238px;
+    }
+
+    .charter_image img {
+        height: 100%;
+    }
+
+    .retail_prices_container {
+        padding: 10px;
+    }
+
+    .experience_levels {
+        padding: 0 15px 0 15px;
+    }
 }
 
 @media only screen and (min-width: 64.063em) {
@@ -473,6 +497,18 @@ header {
     .large-11 { width: 91.66667%; }
 
     .large-12 { width: 100%; }
+
+    .charter_image {
+        padding: 0;
+    }
+
+    .retail_prices_container {
+        padding: 0;
+    }
+
+    .experience_levels {
+        padding: 0;
+    }
 }
 
 /* more small device media query styles*/
@@ -515,6 +551,10 @@ header {
 
     h4 {
         font-size: 1.6rem;
+    }
+
+    .experience_levels {
+        padding: 0 15px 0 15px;
     }
 
     .last-image {
