@@ -338,6 +338,10 @@ header {
     margin-bottom: 5px;
 }
 
+.pm_cell div {
+    margin-bottom: 5px;
+}
+
 .retail_prices_header {
     background-color: rgb(62, 199, 230);
     color: white;

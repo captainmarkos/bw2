@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="Scuba diving schedule for daily dive charters in Fort Lauderdale, Florida." />
+<meta name="keywords" content="Scuba Diving, PADI, Open Water, Free Diving, Fort Lauderdale" />
+<meta name="author" content="Captain Mark" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Raleway:400" />
+<link type="text/css" rel="stylesheet" href="/vendor/font-awesome-4.1.0/css/font-awesome.min.css" />
+<link type="text/css" rel="stylesheet" href="/styles/foundation.css" />
+<link type="text/css" rel="stylesheet" href="/styles/normalize.css" />
+<link type="text/css" rel="stylesheet" href="/styles/bluewild.css" />
+<link type="image/x-icon" rel="SHORTCUT ICON" href="favicon.ico" />
+<title>Blue Wild Scuba: dive schedule</title>
+
+<script type="text/javascript" src="/vendor/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/bluewildscuba.js"></script>
+<script type="text/javascript" src="vendor/moment.min.js"></script>
+<script type="text/javascript">
+
+$(document).ready(function() {
+
+    console.log('--> DOM is loaded');
+
+});
+
+</script>
+</head>
+<body>
+
+    <header>
+        <div class="row offset-top">
+            <div class="small-12 medium-6 large-6 columns no-padding small-only-text-center">
+                <div class="logo-style">Blue Wild</br>Scuba</div>
+            </div>
+            <div class="small-12 medium-6 large-6 columns contact-info small-only-text-center">
+                <a href="tel:19542135067">
+                    <i class="fa fa-phone"></i> : (954) 213-5067
+                </a>&nbsp;&nbsp;
+
+                <br class="show-for-small-only" />
+                <br class="show-for-small-only" />
+
+                <a href="mailto:bluewildscuba@gmail.com" target="_blank">
+                    <i class="fa fa-envelope"></i> : bluewildscuba@gmail.com
+                </a>&nbsp;&nbsp;
+            </div>
+        </div>
+    </header>
+
+    <!-- navbar -->
+    <div class="row">
+        <div class="large-12 column nav">
+            <ul class="inline-list">
+              <li class="no-margin-left"><a href="/test.html"><i class="fa fa-home icon-font-size"></i></a></li>
+              <li><a href="/aboutus.html">About Us</a></li>
+              <li><a href="/charters.html">Charters</a></li>
+              <li><a class="active" href="/dive_schedule.html">Dive Schedule</a></li>
+              <!-- <li><a href="/divelog/index.php" target="_self" class="hide-for-small-only">Dive Log</a></li> -->
+              <li><a href="/reefcreatures/index.php" target="_self">Reef Creature Quiz</a></li>
+              <!-- <li style="float: right;"><span id="facebook-like-button2"></span></li> -->
+            </ul>
+        </div>
+    </div>
+
+<div class="row">
+  <div class="large-12 columns blurb">
+    The dive schedule is updated regularly.  Additionally the captain may change
+    dive site locations due to conditions and / or circumstances.
+  </div>
+</div>
+
+<div class="row">
+  <!-- WEEK 1 -->
+  <table class="dive_schedule large-12 columns">
+    <thead>
+      <tr>
+        <th class="dive_date_header" width="50">DIVE DATE</th>
+        <th class="am_header" width="200">AM</th>
+        <th class="pm_header" width="200">PM</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- MONDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_1}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_1}}</div>
+              <div>{{DIVE_SITE_2_1}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_1}}</div>
+              <div>{{DIVE_SITE_4_1}}</div>
+          </td>
+      </tr>
+
+      <!-- TUESDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_2}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_2}}</div>
+              <div>{{DIVE_SITE_2_2}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_2}}</div>
+              <div>{{DIVE_SITE_4_2}}</div>
+          </td>
+      </tr>
+
+      <!-- WEDNESDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_3}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_3}}</div>
+              <div>{{DIVE_SITE_2_3}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_3}}</div>
+              <div>{{DIVE_SITE_4_3}}</div>
+          </td>
+      </tr>
+
+      <!-- THURSDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_4}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_4}}</div>
+              <div>{{DIVE_SITE_2_4}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_4}}</div>
+              <div>{{DIVE_SITE_4_4}}</div>
+          </td>
+      </tr>
+
+      <!-- FRIDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_5}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_5}}</div>
+              <div>{{DIVE_SITE_2_5}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_5}}</div>
+              <div>{{DIVE_SITE_4_5}}</div>
+          </td>
+      </tr>
+
+      <!-- SATURDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_6}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_6}}</div>
+              <div>{{DIVE_SITE_2_6}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_6}}</div>
+              <div>{{DIVE_SITE_4_6}}</div>
+          </td>
+      </tr>
+
+      <!-- SUNDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_7}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_7}}</div>
+              <div>{{DIVE_SITE_2_7}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_7}}</div>
+              <div>{{DIVE_SITE_4_7}}</div>
+          </td>
+      </tr>
+
+    </tbody>
+  </table>
+
+  <!-- WEEK 2 -->
+  <table class="dive_schedule large-12 columns">
+    <thead>
+      <tr>
+        <th class="dive_date_header" width="50">DIVE DATE</th>
+        <th class="am_header" width="200">AM</th>
+        <th class="pm_header" width="200">PM</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <!-- MONDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_8}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_8}}</div>
+              <div>{{DIVE_SITE_2_8}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_8}}</div>
+              <div>{{DIVE_SITE_4_8}}</div>
+          </td>
+      </tr>
+
+      <!-- TUESDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_9}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_9}}</div>
+              <div>{{DIVE_SITE_2_9}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_9}}</div>
+              <div>{{DIVE_SITE_4_9}}</div>
+          </td>
+      </tr>
+
+      <!-- WEDNESDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_10}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_10}}</div>
+              <div>{{DIVE_SITE_2_10}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_10}}</div>
+              <div>{{DIVE_SITE_4_10}}</div>
+          </td>
+      </tr>
+
+      <!-- THURSDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_11}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_11}}</div>
+              <div>{{DIVE_SITE_2_11}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_11}}</div>
+              <div>{{DIVE_SITE_4_11}}</div>
+          </td>
+      </tr>
+
+      <!-- FRIDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_12}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_12}}</div>
+              <div>{{DIVE_SITE_2_12}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_12}}</div>
+              <div>{{DIVE_SITE_4_12}}</div>
+          </td>
+      </tr>
+
+      <!-- SATURDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_13}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_13}}</div>
+              <div>{{DIVE_SITE_2_13}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_13}}</div>
+              <div>{{DIVE_SITE_4_13}}</div>
+          </td>
+      </tr>
+
+      <!-- SUNDAY -->
+      <tr class="info_row">
+          <td>{{DIVE_DATE_14}}</td>
+
+          <td class="am_cell">
+              <div>{{DIVE_SITE_1_14}}</div>
+              <div>{{DIVE_SITE_2_14}}</div>
+          </td>
+
+          <td class="pm_cell">
+              <div>{{DIVE_SITE_3_14}}</div>
+              <div>{{DIVE_SITE_4_14}}</div>
+          </td>
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+<!-- END: home.html -->
+
+</body>
+</html>
