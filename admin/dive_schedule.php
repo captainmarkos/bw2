@@ -1,5 +1,7 @@
 <?php
 
+date_default_timezone_set('UTC');
+
 require_once('config.php');
 require_once('db_helper.php');
 
@@ -16,7 +18,13 @@ if(!$res) {
 
 $dive_sites = array();
 while($row = $res->fetch_assoc()) {
-    $a = array('id' => $row['id'], 'name' => $row['name']);
+    if($row['depth']) {
+        $name = $row['name'] . ' | ' . $row['depth'] . 'ft';
+    } else {
+        $name = $row['name'];
+    }
+
+    $a = array('id' => $row['id'], 'name' => $name);
     array_push($dive_sites, $a);
 }
 
@@ -38,6 +46,39 @@ if(isset($_REQUEST['charter_save']) && $_REQUEST['charter_save'] == 'Save') {
     if(!$res) {
         echo "ERROR: Query Failed: errno: " . $dbconn->errno . " error: " . $dbconn->error;
     }
+}
+
+if(isset($_REQUEST['create_schedule']) && $_REQUEST['create_schedule'] == 'Create Schedule') {
+    generate_dive_schedule();
+}
+
+function generate_dive_schedule() {
+    // Make a backup of the current schedule.
+    $today = date('Y-m-d_His');
+    $src  = '../dive_schedule.html';
+    $dest = '../backup/dive_schedule.html-' . $today;
+    if(!copy($src, $dest)) {
+        debug_js('backup of ' . $src . ' failed');
+        return false;
+    }
+    debug_js($src . ' copied to ' . $dest);
+
+    // Open the template file and do string replacement.
+    $tmpl = 'dive_schedule.html.tmpl';
+    $content = file_get_contents($tmpl);
+    if(!$content) {
+        debug_js('failed to get contents of ' . $tmpl);
+        return false;
+    }
+
+    return true;
+}
+
+
+function debug_js($str) {
+    echo '<script type="text/javascript">' .
+         '    console.log("--> ' . $str . '");' .
+         '</script>';
 }
 
 ?>
@@ -63,21 +104,23 @@ if(isset($_REQUEST['charter_save']) && $_REQUEST['charter_save'] == 'Save') {
 <script type="text/javascript" src="/js/bluewildscuba.js"></script>
 <script type="text/javascript">
 
-    function validate() {
-        console.log('--> charter-date: ' + $('#charter-date').val());
-        console.log('--> dive-site1: ' + $('#dive-site1').val());
-        console.log('--> dive-site2: ' + $('#dive-site2').val());
-        console.log('--> charter-time: ' + $('#charter-time').val());
 
-        if(!$('#charter-date').val() || !$('#dive-site1').val() ||
-           !$('#dive-site2').val() || !$('#charter-time').val()) {
-            alert('All fields need to be filled out.');
-            $('#charter-form').submit(function(e) {
-                e.preventDefault();
-            });
-        }
+function validate() {
+    console.log('--> charter-date: ' + $('#charter-date').val());
+    console.log('--> dive-site1: ' + $('#dive-site1').val());
+    console.log('--> dive-site2: ' + $('#dive-site2').val());
+    console.log('--> charter-time: ' + $('#charter-time').val());
+
+    if(!$('#charter-date').val() || !$('#dive-site1').val() ||
+       !$('#dive-site2').val() || !$('#charter-time').val()) {
+        alert('All fields need to be filled out.');
+        $('#charter-form').submit(function(e) {
+            e.preventDefault();
+        });
+        return false;
     }
-
+    return true;
+}
 
 $(function() {
 
@@ -96,26 +139,42 @@ $(function() {
 </script>
 <style>
 
+#charter-form {
+    font-size: .9em;
+    text-align: center;
+}
+
 #dive-site1, #dive-site2 {
     color: #000000;
-    width: 300px;
+    width: 250px;
+    font-size: .9em;
 }
 
 #charter-date {
     width: 100px;
     display: inline-block;
     color: #000000;
+    font-size: .9em;
+    margin-right: 10px;
 }
 
 #charter-time {
-    width: 100px;
+    width: 60px;
     display: inline-block;
     color: #000000;
+    font-size: .9em;
+    margin-right: 10px;
 }
 
 #charter-save {
     color: #000000;
     margin-left: 25px;
+    font-size: .9em;
+}
+
+#create-schedule {
+    color: #000000;
+    font-size: .9em;
 }
 
 </style>
@@ -147,11 +206,11 @@ $(function() {
         <div class="large-12 column nav">
             <ul class="inline-list">
               <li class="no-margin-left"><a href="/"><i class="fa fa-home icon-font-size"></i></a></li>
-              <li><a href="/aboutus.html">About Us</a></li>
-              <li><a href="/charters.html">Charters</a></li>
-              <li><a href="/dive_schedule.html">Dive Schedule</a></li>
-              <!-- <li><a href="/divelog/index.php" target="_self" class="hide-for-small-only">Dive Log</a></li> -->
-              <li><a href="/reefcreatures/index.php" target="_self">Reef Creature Quiz</a></li>
+              <li><a href="../aboutus.html">About Us</a></li>
+              <li><a href="../charters.html">Charters</a></li>
+              <li><a href="../dive_schedule.html">Dive Schedule</a></li>
+              <!-- <li><a href="../divelog/index.php" target="_self" class="hide-for-small-only">Dive Log</a></li> -->
+              <li><a href="../reefcreatures/index.php" target="_self">Reef Creature Quiz</a></li>
               <!-- <li style="float: right;"><span id="facebook-like-button2"></span></li> -->
             </ul>
         </div>
@@ -178,31 +237,46 @@ $(function() {
                           <option value="AM">AM</option>
                           <option value="PM">PM</option>
                       </select>
-                <br />
-                Dive Site 1: <select id="dive-site1" name="dive_site1">
-                                 <option value=""></option>
+
+                Site 1: <select id="dive-site1" name="dive_site1" style="margin-right: 10px;">
+                             <option value="Open">Open</option>
                              <?php
                                  foreach($dive_sites as $site) {
                                      echo '<option value="' . $site['name'] . '">' .
                                      $site['name'] . '</option>';
                                  }
                              ?>
-                             </select>
-                <br />
-                <br />
-                Dive Site 2: <select id="dive-site2" name="dive_site2">
-                                 <option value=""></option>
+                         </select>
+
+                Site 2: <select id="dive-site2" name="dive_site2">
+                             <option value="Open">Open</option>
                              <?php
                                  foreach($dive_sites as $site) {
                                      echo '<option value="' . $site['name'] . '">' .
                                      $site['name'] . '</option>';
                                  }
                              ?>
-                             </select>
-                <br />
-                <br />
-                <input type="submit" onclick="validate();" id="charter-save" name="charter_save" value="Save" />
+                         </select>
+
+                <div style="text-align: center; margin-top: 30px;">
+                    <span>
+                        <input type="submit"
+                               id="charter-save"
+                               name="charter_save"
+                               onclick="return validate();"
+                               value="Save" />
+                    </span>
+                    <span>
+                        <input type="submit"
+                               id="create-schedule"
+                               name="create_schedule"
+                               onclick="create_schedule();"
+                               value="Create Schedule" />
+                    </span>
+                </div>
             </form>
+
+            <?php print_charter_table($dbconn); ?>
 
         </div>
     </div>
@@ -211,3 +285,42 @@ $(function() {
 
 </body>
 </html>
+<?php
+
+function print_charter_table($dbconn) {
+    $db_helper = new DBHelper($dbconn);
+
+    $week_ago = date('Y-m-d', strtotime('-1 week'));
+    $sql  = "SELECT * FROM charter_schedules WHERE charter_date >= ? ";
+    $sql .= "ORDER BY charter_date LIMIT 28";
+
+    $sql = $db_helper->construct_secure_query($sql, array($week_ago));
+    $res = $dbconn->query($sql);
+    if(!$res) {
+        echo "ERROR: Query Failed: errno: " . $dbconn->errno . " error: " . $dbconn->error;
+        exit();
+    }
+
+    echo '<div id="charter-table">';
+    echo '<table style="width: 100%;">';
+    echo '    <tr>';
+    echo '        <td>Date</td>';
+    echo '        <td>Time</td>';
+    echo '        <td>Site 1</td>';
+    echo '        <td>Site 2</td>';
+    echo '    </tr>';
+
+    while($row = $res->fetch_assoc()) {
+        echo '    <tr>';
+        echo '        <td>' . $row['charter_date'] . '</td>';
+        echo '        <td>' . $row['charter_time'] . '</td>';
+        echo '        <td>' . $row['dive_site1'] . '</td>';
+        echo '        <td>' . $row['dive_site2'] . '</td>';
+        echo '    </tr>';
+    }
+
+    echo '</table>';
+    echo '</div>';
+}
+
+?>
