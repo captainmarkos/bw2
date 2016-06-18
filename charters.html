@@ -12,6 +12,7 @@
 <link type="text/css" rel="stylesheet" href="/styles/normalize.css" />
 <link type="text/css" rel="stylesheet" href="/styles/bluewild.css" />
 <link type="image/x-icon" rel="SHORTCUT ICON" href="favicon.ico" />
+
 <title>Blue Wild Scuba: Charters</title>
 
 <script type="text/javascript" src="/vendor/jquery-2.1.1.min.js"></script>
@@ -19,11 +20,11 @@
 
 </head>
 <body>
-<div id="TOP"></div>
+
     <header>
         <div class="row offset-top">
             <div class="small-12 medium-6 large-6 columns no-padding small-only-text-center">
-                <img id="logo-image" src="images/bluewildscuba_logo_transparent.png" alt="Blue Wild Scuba" />
+                <div class="logo-style">Blue Wild</br>Scuba</div>
             </div>
             <div class="small-12 medium-6 large-6 columns contact-info small-only-text-center">
                 <a href="tel:19542135067"><i class="fa fa-phone"></i> : (954) 213-5067</a>&nbsp;&nbsp;
@@ -39,9 +40,9 @@
     <div class="row">
         <div class="large-12 column nav">
             <ul class="inline-list">
-              <li class="no-margin-left"><a href="/"><i class="fa fa-home icon-font-size"></i></a></li>
+              <li class="no-margin-left"><a href="/test.html"><i class="fa fa-home icon-font-size"></i></a></li>
               <li><a href="/aboutus.html">About Us</a></li>
-              <li><a href="/charters.html">Charters</a></li>
+              <li><a class="active" href="/charters.html">Charters</a></li>
               <li><a href="/dive_schedule.html">Dive Schedule</a></li>
               <!-- <li><a href="/divelog/index.php" target="_self" class="hide-for-small-only">Dive Log</a></li> -->
               <li><a href="/reefcreatures/index.php" target="_self">Reef Creature Quiz</a></li>
@@ -81,27 +82,109 @@
             <div class="panel">
                 <div class="row">
               <!-- TODO: Style this to look like a table -->
-2 Tank Dive $70<br>
-2 Tank Dive + Tanks $90<br>
-2 Tank Dive + Full Gear $125<br>
-2 Tank Dive + BC, Reg &amp; Tanks $115<br>
-Night Dive $75<br>
-Snorkeler / Bubble Watcher $50<br>
-Free-Diver $55<br>
-Divemaster Guide $50<br>
-<br>
-Tank Rental $10
-Nitrox Tank $15<br>
-Mask, Fins, Snorkel $15<br>
-Wetsuit $10<br>
-BCD $12<br>
-Regulator $12<br>
+                  <table class="dive_schedule large-7 columns">
+                    <thead>
+                      <tr>
+                        <th class="retail_prices_header" colspan="2">RETAIL PRICES</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr class="info_row">
+                        <td>2 Tank Dive</td>
+                        <td class="am_cell">
+                          <div>$70</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>2 Tank Dive + Tanks</td>
+                        <td class="am_cell">
+                          <div>$90</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>2 Tank Dive + Full Gear</td>
+                        <td class="am_cell">
+                          <div>$125</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>2 Tank Dive + BC, Reg & Tanks</td>
+                        <td class="am_cell">
+                          <div>$115</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>Night Dive</td>
+                        <td class="am_cell">
+                          <div>$75</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>Snorkeler</td>
+                        <td class="am_cell">
+                          <div>$50</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>Free Diver</td>
+                        <td class="am_cell">
+                          <div>$55</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>Divemaster Guide</td>
+                        <td class="am_cell">
+                          <div>$50</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+
+                  <table class="dive_schedule large-7 columns">
+                    <tbody>
+                      <tr class="info_row">
+                        <td>Tank Rental</td>
+                        <td class="am_cell">
+                          <div>$10</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>Nitrox Tank</td>
+                        <td class="am_cell">
+                          <div>$15</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>Mask, Fins, Snorkel</td>
+                        <td class="am_cell">
+                          <div>$15</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>Wetsuit</td>
+                        <td class="am_cell">
+                          <div>$10</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>BCD</td>
+                        <td class="am_cell">
+                          <div>$12</div>
+                        </td>
+                      </tr>
+                      <tr class="info_row">
+                        <td>Regulator</td>
+                        <td class="am_cell">
+                          <div>$12</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
             </div>
         </div>
     </div>
 </div>
 <!-- END: scuba_courses.html -->
-
 </body>
 </html>

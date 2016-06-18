@@ -5,6 +5,10 @@
     color: #ffff00 !important;
 }
 
+.active {
+    color: #ffff00;
+}
+
 .course-title {
     color: #ffffff !important;
 }
@@ -64,6 +68,14 @@ header {
 .menu-item-thumbnail {
     height: 20px;
     border-radius: .25em;
+}
+
+.panel {
+    margin: 0 !important;
+}
+
+.panel p {
+    margin-bottom: 0;
 }
 
 .scrollto-top-link {
@@ -286,6 +298,70 @@ header {
   float: left;
 }
 
+.dive_schedule {
+    background: none;
+    border: none;
+    margin-bottom: 40px;
+}
+
+.dive_schedule thead {
+    background: none;
+}
+
+.dive_schedule tbody tr td {
+    color: white;
+}
+
+.dive_schedule tbody tr td a {
+    color: #ffff00;
+}
+
+.dive_schedule tbody tr:nth-of-type(even) {
+    background: none;
+}
+
+.dive_schedule tbody tr:nth-of-type(odd) {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.dive_date_header {
+    color: white;
+    background: rgba(255, 255, 255, 0.14);
+}
+
+.am_cell div {
+    margin-bottom: 5px;
+}
+
+.retail_prices_header {
+    background-color: rgb(62, 199, 230);
+    color: white;
+}
+
+.am_header {
+    background-color: rgb(62, 199, 230);
+    color: white;
+}
+
+.pm_header {
+    background-color: rgb(0, 146, 179);
+    color: white;
+}
+
+.info_row a {
+    color: #4343b9;
+}
+
+.info_row td:not(:first-child) {
+    text-align: center;
+}
+
+.blurb {
+    font-size: .9375em;
+    padding: 10px 10px 10px 0;
+    line-height: 20px;
+}
 /* small devices */
 @media only screen {
     /* Define mobile styles */
