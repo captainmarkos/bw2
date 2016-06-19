@@ -1,5 +1,8 @@
 /* core css used from foundation css */
 
+.bwlink {
+    color: #ffff00 !important;
+}
 
 .selected {
     color: #ffff00 !important;
