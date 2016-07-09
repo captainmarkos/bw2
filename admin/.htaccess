@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "restricted area"
+AuthUserFile /home1/valeriej/www/admin/.htpasswd
+require valid-user
