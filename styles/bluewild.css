@@ -332,11 +332,6 @@ header {
     border-bottom: 1px solid white;
 }
 
-.dive_date_header {
-    color: white;
-    background: rgba(255, 255, 255, 0.14);
-}
-
 .am_cell div {
     margin-bottom: 5px;
 }
@@ -350,14 +345,21 @@ header {
     color: white;
 }
 
-.am_header {
+.dive_date_header {
     background-color: rgb(62, 199, 230);
     color: white;
 }
 
-.pm_header {
-    background-color: rgb(0, 146, 179);
+.am_header {
+    background-color: rgb(62, 199, 230);
     color: white;
+    text-align: center;
+}
+
+.pm_header {
+    background-color: rgb(62, 199, 230);
+    color: white;
+    text-align: center;
 }
 
 .info_row a {
