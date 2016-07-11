@@ -86,7 +86,7 @@ function debug_js($str) {
 <html lang="en">
 <head>
 <meta charset="utf-8" />
-<meta name="description" content="Scuba diving schedule for daily dive charters in Fort Lauderdale, Florida." />
+<meta name="description" content="Scuba diving schedule for daily dive charters in North Miami, Florida." />
 <meta name="keywords" content="Scuba Diving, PADI, Open Water, Free Diving, Fort Lauderdale" />
 <meta name="author" content="Captain Mark" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -187,9 +187,8 @@ $(function() {
                 <div class="logo-style">Blue Wild</br>Scuba</div>
             </div>
             <div class="small-12 medium-6 large-6 columns contact-info small-only-text-center">
-                <a href="tel:19542135067">
-                    <i class="fa fa-phone"></i> : (954) 213-5067
-                </a>&nbsp;&nbsp;
+                <a href="tel:9543726163">
+                    <i class="fa fa-phone"></i> : (954) 372-6163</a>&nbsp;&nbsp;
 
                 <br class="show-for-small-only" />
                 <br class="show-for-small-only" />
