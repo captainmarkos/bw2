@@ -1,0 +1,10 @@
+Auth Token: 4176933139.1677ed0.cc5f93bcf7f34a4b83b5461855425221
+Client ID: acb4648379694db8a3bc37658be2f24e
+Client Secret:   cd680bdc504e40da85d2ad6c679e20b6
+
+bluewildscuba
+
+curl -v "https://api.instagram.com/v1/users/self/media/recent/?access_token=4176933139.1677ed0.cc5f93bcf7f34a4b83b5461855425221&count=4" | json_pp
+
+
+
