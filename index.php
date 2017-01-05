@@ -87,15 +87,15 @@ $(document).ready(function() {
 <div class="row">
     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
       <li class="last-image">
-        <a href="<?php echo $images[0]['href']; ?>"><img src="<?php echo $images[0]['src']; ?>" alt="Learn to Dive" /></a>
+        <a href="<?php echo $images[0]['href']; ?>" target="_blank"><img src="<?php echo $images[0]['src']; ?>" alt="Learn to Dive" /></a>
       </li>
 
       <li class="show-for-medium-up last-image">
-        <a href="<?php echo $images[1]['href']; ?>"><img src="<?php echo $images[1]['src']; ?>" alt="Scuba Diving" /></a>
+        <a href="<?php echo $images[1]['href']; ?>" target="_blank"><img src="<?php echo $images[1]['src']; ?>" alt="Scuba Diving" /></a>
       </li>
 
       <li class="show-for-medium-up last-image">
-        <a href="<?php echo $images[2]['href']; ?>"><img src="<?php echo $images[2]['src']; ?>" alt="Dive Boat" /></a>
+        <a href="<?php echo $images[2]['href']; ?>" target="_blank"><img src="<?php echo $images[2]['src']; ?>" alt="Dive Boat" /></a>
       </li>
     </ul>
 </div>
