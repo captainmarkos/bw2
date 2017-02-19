@@ -25,6 +25,14 @@ $(document).ready(function() {
 });
 
 </script>
+
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<script>
+  (adsbygoogle = window.adsbygoogle || []).push({
+    google_ad_client: "ca-pub-1418859138704425",
+    enable_page_level_ads: true
+  });
+</script>
 </head>
 <body>
 
@@ -85,17 +93,29 @@ $(document).ready(function() {
 
 <!-- BEGIN: home.html -->
 <div class="row">
-    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3">
+    <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 more-bottom-space">
       <li class="last-image">
-        <a href="<?php echo $images[0]['href']; ?>" target="_blank"><img src="<?php echo $images[0]['src']; ?>" alt="Learn to Dive" /></a>
+        <a href="<?php echo $images[0]['href']; ?>" target="_blank"><img src="<?php echo $images[0]['src']; ?>" alt="<?php echo instagram_text(post); ?>" /></a>
+        <div class="instagram-caption">
+          <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
+          <?php echo short_caption($images[0]['alt'], 68); ?>
+        </div>
       </li>
 
       <li class="show-for-medium-up last-image">
         <a href="<?php echo $images[1]['href']; ?>" target="_blank"><img src="<?php echo $images[1]['src']; ?>" alt="Scuba Diving" /></a>
+        <div class="instagram-caption">
+          <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
+          <?php echo short_caption($images[1]['alt'], 68); ?>
+        </div>
       </li>
 
       <li class="show-for-medium-up last-image">
         <a href="<?php echo $images[2]['href']; ?>" target="_blank"><img src="<?php echo $images[2]['src']; ?>" alt="Dive Boat" /></a>
+        <div class="instagram-caption">
+          <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
+          <?php echo short_caption($images[2]['alt'], 68); ?>
+        </div>
       </li>
     </ul>
 </div>
@@ -112,15 +132,15 @@ $(document).ready(function() {
             </p>
 
             </br>
-            <p>Our dive boat, the &quot;Valerie J&quot; is located at:<br/>
-                <a class="bwlink" href="https://www.google.com/maps/place/202+Sunny+Isles+Blvd+%236,+Sunny+Isles+Beach,+FL+33160/@25.9298225,-80.1261481,17z/data=!3m1!4b1!4m5!3m4!1s0x88d9ad19bea4dce9:0x1ad68b685b2246b4!8m2!3d25.9298177!4d-80.1239541" target="_blank">PORTOFINO DIVER ACADEMY</br>202 SUNNY ISLES BLVD, SUITE 6</br>SUNNY ISLES BEACH 33160 FL</a>
-                </br>
+            <p>Our dive boat, the &quot;Valerie J&quot; is located in North Miami, Florida near Haulover Inlet.
+               We are in fact the only commercial dive boat operating in this area. 
+               <a target="_blank" class="bwlink" href="https://www.google.com/maps/search/haulover+inlet+miami/@25.9023987,-80.1320025,2822m/data=!3m1!1e3">Google Map of the area</a> 
             </p>
 
             </br>
-            <p>Thinking about becoming <a class="bwlink" href="/">Open Water</a>
-               certified? Need to take a <a class="bwlink" href="/">scuba refresher
-               course</a>?  Looking for a <a class="bwlink" href="/">divemaster guide</a>?
+            <p>Thinking about becoming Open Water
+               certified? Need to take a scuba refresher
+               course</span>?  Looking for a divemaster guide?
                Please contact us with any questions.
             </p>
         </div>

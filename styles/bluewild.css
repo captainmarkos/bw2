@@ -1,5 +1,17 @@
 /* core css used from foundation css */
 
+.instagram-caption {
+    color: #ffff00;
+    font-size: 0.75em;
+    font-family: Verdana, 'Raleway';
+}
+
+.instagram-icon {
+    width: 25px;
+}
+
+.more-bottom-space { margin-bottom: 50px; }
+
 .bwlink {
     color: #ffff00 !important;
 }
