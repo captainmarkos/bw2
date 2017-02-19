@@ -95,27 +95,30 @@ $(document).ready(function() {
 <div class="row">
     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 more-bottom-space">
       <li class="last-image">
-        <a href="<?php echo $images[0]['href']; ?>" target="_blank"><img src="<?php echo $images[0]['src']; ?>" alt="<?php echo instagram_text(post); ?>" /></a>
-        <div class="instagram-caption">
-          <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
-          <?php echo short_caption($images[0]['alt'], 68); ?>
-        </div>
+        <a href="<?php echo $images[0]['href']; ?>" target="_blank"><img src="<?php echo $images[0]['src']; ?>" alt="<?php echo instagram_text(post); ?>" />
+          <div class="instagram-caption">
+            <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
+            <?php echo short_caption($images[0]['alt'], 68); ?>
+          </div>
+        </a>
       </li>
 
       <li class="show-for-medium-up last-image">
-        <a href="<?php echo $images[1]['href']; ?>" target="_blank"><img src="<?php echo $images[1]['src']; ?>" alt="Scuba Diving" /></a>
-        <div class="instagram-caption">
-          <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
-          <?php echo short_caption($images[1]['alt'], 68); ?>
-        </div>
+        <a href="<?php echo $images[1]['href']; ?>" target="_blank"><img src="<?php echo $images[1]['src']; ?>" alt="Scuba Diving" />
+          <div class="instagram-caption">
+            <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
+            <?php echo short_caption($images[1]['alt'], 68); ?>
+          </div>
+        </a>
       </li>
 
       <li class="show-for-medium-up last-image">
-        <a href="<?php echo $images[2]['href']; ?>" target="_blank"><img src="<?php echo $images[2]['src']; ?>" alt="Dive Boat" /></a>
-        <div class="instagram-caption">
-          <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
-          <?php echo short_caption($images[2]['alt'], 68); ?>
-        </div>
+        <a href="<?php echo $images[2]['href']; ?>" target="_blank"><img src="<?php echo $images[2]['src']; ?>" alt="Dive Boat" />
+          <div class="instagram-caption">
+            <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
+            <?php echo short_caption($images[2]['alt'], 68); ?>
+          </div>
+        </a>
       </li>
     </ul>
 </div>
