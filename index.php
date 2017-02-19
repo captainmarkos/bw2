@@ -95,10 +95,10 @@ $(document).ready(function() {
 <div class="row">
     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 more-bottom-space">
       <li class="last-image">
-        <a href="<?php echo $images[0]['href']; ?>" target="_blank"><img src="<?php echo $images[0]['src']; ?>" alt="<?php echo instagram_text(post); ?>" />
+        <a href="<?php echo $images[0]['href']; ?>" target="_blank"><img src="/images/valerie_j_1.jpg" alt="Scuba Diving Charters" />
           <div class="instagram-caption">
             <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
-            <?php echo short_caption($images[0]['alt'], 68); ?>
+            #bluewildscuba
           </div>
         </a>
       </li>
