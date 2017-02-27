@@ -95,7 +95,7 @@ $(document).ready(function() {
 <div class="row">
     <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-3 more-bottom-space">
       <li class="last-image">
-        <a href="<?php echo $images[0]['href']; ?>" target="_blank"><img src="/images/valerie_j_1.jpg" alt="Scuba Diving Charters" />
+        <a href="https://www.instagram.com/bluewildscuba/" target="_blank"><img src="/images/valerie_j_1.jpg" alt="Scuba Diving Charters" />
           <div class="instagram-caption">
             <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
             #bluewildscuba
@@ -104,19 +104,19 @@ $(document).ready(function() {
       </li>
 
       <li class="show-for-medium-up last-image">
-        <a href="<?php echo $images[1]['href']; ?>" target="_blank"><img src="<?php echo $images[1]['src']; ?>" alt="Scuba Diving" />
+        <a href="<?php echo $images[0]['href']; ?>" target="_blank"><img src="<?php echo $images[0]['src']; ?>" alt="Scuba Diving" />
           <div class="instagram-caption">
             <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
-            <?php echo short_caption($images[1]['alt'], 68); ?>
+            <?php echo short_caption($images[0]['alt'], 68); ?>
           </div>
         </a>
       </li>
 
       <li class="show-for-medium-up last-image">
-        <a href="<?php echo $images[2]['href']; ?>" target="_blank"><img src="<?php echo $images[2]['src']; ?>" alt="Dive Boat" />
+        <a href="<?php echo $images[1]['href']; ?>" target="_blank"><img src="<?php echo $images[1]['src']; ?>" alt="Dive Boat" />
           <div class="instagram-caption">
             <img src="images/instagram-Logo-PNG-Transparent-Background.png" style="width: 20px;" />
-            <?php echo short_caption($images[2]['alt'], 68); ?>
+            <?php echo short_caption($images[1]['alt'], 68); ?>
           </div>
         </a>
       </li>
@@ -135,15 +135,22 @@ $(document).ready(function() {
             </p>
 
             </br>
-            <p>Our dive boat, the &quot;Valerie J&quot; is located in North Miami, Florida near Haulover Inlet.
-               We are in fact the only commercial dive boat operating in this area. 
-               <a target="_blank" class="bwlink" href="https://www.google.com/maps/search/haulover+inlet+miami/@25.9023987,-80.1320025,2822m/data=!3m1!1e3">Google Map of the area</a> 
+            <p>Our dive boat, the &quot;Valerie J&quot; is located in North Miami, Haulover Inlet.
+               <a target="_blank" class="bwlink" href="https://www.google.com/maps/@25.9048232,-80.1205176,7946m/data=!3m1!1e3!4m2!6m1!1s1ILf42h7xpZBHzAa6z-WKC5aZHuQ">Google Map of the area</a> 
             </p>
 
             </br>
+            <?php
+                $hrefs = array(
+                    'http://www.seadreamsscuba.com/courses/',
+                    'https://www.northmiamidivers.com/collections/classes'
+                  );
+                $random_href = $hrefs[(rand() % count($hrefs))];
+            ?>
             <p>Thinking about becoming Open Water
                certified? Need to take a scuba refresher
-               course</span>?  Looking for a divemaster guide?
+               course ?  Interested in becoming a PADI Divemaster?
+
                Please contact us with any questions.
             </p>
         </div>
