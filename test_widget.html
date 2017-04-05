@@ -1,26 +1,56 @@
 <html>
 <head>
-<title>Widget Test NonBlocking</title>
+<title>Widget Test</title>
 </head>
 <body>
-<center><h2>NonBlocking - Widget Test</h2></center>
+<center><h2>Widget Test</h2></center>
 
 
 <style>
 body {background:#fff;}
 </style>
 
+<div>
+    <!--
+
+http://book-direct-php.bookdirect.local/widgets/search_widget.js.php?id=1165&start_range=2017/03/27&end_range=2017/03/31
+
+
+    <script src="http://book-direct-php.bookdirect.local/widgets/search_widget.js.php?id=1165&start_range=2017/03/27&end_range=2017/03/31" type="text/javascript"></script>
+    -->
+
+    <!-- LOCAL -->
+    <!-- ----- -->
+    <!--
+<script src="//book-direct-php.bookdirect.local/widgets/search_widget2.js.php?id=1195&campaign2=test&start_range=2017/04/01&end_range=2017/04/15&start_date_offset=1&end_date_offset=6" type="text/javascript"></script>
+    -->
+
+    <!-- STAGING -->
+    <!-- ----- -->
+    <!--
+<script src="http://widgets.fargomoorhead.staging.bookdirect.net/widgets/search_widget.js.php?id=1165" type="text/javascript"></script>
+    -->
+
+    <!-- PRODUCTION -->
+    <!-- ----- -->
+    <!--
+<script src="http://widgets.bookdirect.net/widgets/search_widget2.js.php?id=1208&start_range=2017/04/01&end_range=2017/04/15&start_date_offset=1&end_date_offset=6" type="text/javascript"></script>
+    -->
+</div>
+
+
 <div id="booking-form-wrap" style="height:250px;"></div>
 <script type="text/javascript">
   (function() {
     var script = document.createElement('script')
     script.type = 'text/javascript';
-    script.src = "http://0.0.0.0:3000/hs4/widgets/1106.js?widget_element=booking-form-wrap&lodging_id=54017";
+    var qs_params = '&show_locations=1';
+    script.src = "http://0.0.0.0:3000/hs4/widgets/1207.js?widget_element=booking-form-wrap" + qs_params;
     document.body.appendChild(script);
   })();
 </script>
 
-
+<!--
 <div id="booking-form-wrap2" style="margin-top:0px;"></div>
 <script type="text/javascript">
   (function() {
@@ -30,6 +60,6 @@ body {background:#fff;}
     document.body.appendChild(script);
   })();
 </script>
-
+-->
 </body>
 </html>
