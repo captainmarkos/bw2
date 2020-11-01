@@ -1,0 +1,72 @@
+/* Reef Creature Quiz  */
+
+#rc-img {
+    display: block;
+    margin-bottom: 18px;
+}
+
+#rc-answer-table {
+    border-radius: 15px;
+    margin-bottom: 0px !important;
+    border: none !important;
+}
+
+.rc-letter {
+    padding-left: 8px;
+    margin-right: 4px;
+    display: inline;
+}
+
+.rc-answer-text {
+    padding: 8px;
+    display: inline-block;
+}
+
+.rc-answer-wrong {
+    padding: 8px;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #eeaaaa;
+    box-shadow: 1px 1px 20px #ff0000;
+    color: #222222;
+}
+
+.rc-answer-correct {
+    padding: 8px;
+    display: inline-block;
+    border-radius: 15px;
+    background-color: #82dac9;
+    box-shadow: 1px 1px 20px #000088;
+    color: #222222;
+}
+
+#rc-quiz-answers {
+    margin-top: 10px;
+}
+
+.rc-input {
+    color: #000000;
+    background: #f0f0f0;
+    border: 1px solid #30b9f3;
+    vertical-align: 1px;
+    padding-bottom: 1px;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.rc-radio {
+    color: #000000;
+    background: #ffffff;
+    border: 0px solid #ffffff;
+    vertical-align: 1px;
+}
+
+#ans_A, #ans_B, #ans_C, #ans_D {
+    cursor: pointer;
+    margin-bottom: 20px;
+    height: 28px;
+}
+
+#ans_A:hover, #ans_B:hover, #ans_C:hover, #ans_D:hover {
+    color: #ffff00;
+}
